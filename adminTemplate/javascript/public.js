@@ -3,10 +3,13 @@ $(function(){
 	'use strict';
 	//左侧导航菜单效果
 	$('.side-menu li dt').click(function(){
-		$(this).parents('li').addClass('open');
+		if ($(this).parents('li').hasClass('open')) {
+			$(this).parents('li').removeClass('open');
+		} else {
+			$(this).parents('li').addClass('open');
+		};
 		$(this).parents('.side-menu').find('.InitialPage').removeClass('active');
 		$(this).parents('li').siblings().removeClass('open');
-		
 	});
 	$('.side-menu dd a').click(function(){
 		$(this).parents('li').addClass('open');
