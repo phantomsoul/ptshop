@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <link rel="icon" href="images/icon/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_582503_j9hz2jur9kx7ds4i.css" />
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_582503_ru9o8pzxkvnuq5mi.css" />
 <script src="javascript/jquery.js"></script>
 <script src="javascript/plug-ins/customScrollbar.min.js"></script>
 <script src="javascript/plug-ins/echarts.min.js"></script>
@@ -416,114 +416,278 @@
                     </header>
                     <hr>
                 </section>
-                <div class="flow-layout col-4">
+                <blockquote class="blockquote mb-20">
+                    <p class="text-success">原始模板为php文件格式，css为less分类编辑，您所看到的生成后的html版本</p>
+                    <p class="text-success">当前页面左侧导航根据根据路径而定，这里可能未产生效果</p>
+                    <p class="text-success">引入样式建议link的方式引入页面，避免使用css导入样式，特此说明</p>
+                    <p>本模板基于HTML5+CSS3的基础上进行设计制作，仅支持高版本浏览器，如果亲还在使用低版本浏览器，
+                    暂时只能i'm sorryO(∩_∩)O咯~望亲见谅！</p>
+                    <p>内容包含：页面基础排版（flex/column-count）布局、按钮系列组、表格系列、进度条、分页、表单、
+                    文本编辑器、统计图表、TAB选项卡、CSS3基础动画及第三方弹层插件等常见页面使用元素。</p>
+                </blockquote>
+                <div class="panel panel-default">
+                    <div class="panel-bd capitalize">
+                        浏览器兼容：google chrome、microsoft edge、360浏览器、火狐浏览器、uc浏览器等高版本浏览器。
+                    </div>
+                </div>
+                
+                <div class="clear mt-20">
+                    <div class="fl">
+                        <button class="btn btn-secondary"><i class="icon-double-angle-left"></i>上一周</button>
+                        <button class="btn btn-secondary">下一周<i class="icon-double-angle-right"></i></button>
+                    </div>
+                    <div class="fr input-group">
+                        <input type="text" class="form-control" placeholder="搜索..." style="width:290px;"/>
+                        <button class="btn btn-secondary-outline">搜索</button>
+                    </div>
+                </div>
+                <table class="table table-bordered  mb-15 mt-15">
+                    <thead>
+                        <tr class="cen">
+                            <th>今日订单数（单位：单）</th>
+                            <th>今日订单额（单位：元）</th>
+                            <th>今日销售量（单位：件）</th>
+                            <th>库存警告（单位：件）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cen">
+                            <td><b>839</b></td>
+                            <td><b>￥12000.00</b></td>
+                            <td><b>932</b></td>
+                            <td><b class="text-warning">8</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="lt clear">
+                    <div class="fl">
+                        <button class="btn btn-warning"><i class="icon-cog"></i>批量编辑</button>
+                        <button class="btn btn-danger"><i class="icon-trash"></i>批量删除</button>
+                        <button class="btn btn-disabled" disabled="disabled"><i class="icon-remove-sign"></i>不可编辑</button>
+                    </div>
+                    <div class="pagination fr"></div>
+                </div>
+                <table class="table table-bordered  mb-15 mt-15">
+                    <tbody>
+                        <tr class="cen">
+                            <td style="width:50%">
+                                <div id="demo1" style="height:300px"></div>
+                            </td>
+                            <td style="width:50%">
+                                <div id="demo2" style="height:300px"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!--瀑布流布局3列：：嵌套-->
+                <div class="flow-layout col-3">
                     <ul>
                         <li class="child-wrap">
                             <div class="panel panel-default">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title"><span class="label label-primary pull-right">月</span><h5>收入</h5></div>
-                                    <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
-                                        <div class="stat-percent font-bold text-primary">98%<i class="icon-tubiaoshangshengqushi"></i></div>
-                                        <small>总收入</small>
-                                    </div>    
+                                <div class="panel-bd">
+                                    后台模板不存在页面<abbr class="capitalize">seo</abbr>优化问题，这里将head单独提出来，加载公共引入文件。
                                 </div>
                             </div>
                         </li>
                         <li class="child-wrap">
                             <div class="panel panel-default">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title"><span class="label label-success pull-right">今日</span><h5>订单</h5></div>
-                                    <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
-                                        <div class="stat-percent font-bold text-success">20%<i class="icon-tubiaoshangshengqushi"></i></div>
-                                        <small>新订单</small>
-                                    </div>
+                                <div class="panel-bd">
+                                    整体结构比较清晰，大家可根据项目对其调整； 该模板色值预定义6类，对应每个模块颜色。
+                                    即：<span class="text-muted">text-muted</span>、
+                                    <span class="text-primary">text-primary</span>、
+                                    <span class="text-success">text-success</span>、
+                                    <span class="text-info">text-info</span>、
+                                    <span class="text-warning">text-warning</span>、
+                                    <span class="text-danger">text-danger</span>需要重新定义或增删自行修改即可。
                                 </div>
                             </div>
                         </li>
                         <li class="child-wrap">
                             <div class="panel panel-default">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title"><span class="label label-info pull-right">一周内</span><h5>访客</h5></div>
-                                    <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
-                                        <div class="stat-percent font-bold text-info">44%<i class="icon-tubiaoshangshengqushi"></i></div>
-                                        <small>新访客</small>
-                                    </div>
+                                <div class="panel-bd">
+                                    <span class="text-primary">文本编辑器</span>及<span class="text-primary">数据统计图表</span>均引用百度相关插件，可另行处理。
                                 </div>
                             </div>
                         </li>
                         <li class="child-wrap">
                             <div class="panel panel-default">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title"><span class="label label-danger pull-right">到目前为止</span><h5>会员</h5></div>
-                                    <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
-                                        <div class="stat-percent font-bold text-danger">38%<i class="icon-tubiaoshangshengqushi"></i></div>
-                                        <small>注册会员</small>
-                                    </div>
+                                <div class="panel-bd">
+                                    样式通过简单的<span class="text-info capitalize">less格式</span>分类引入，需要二次编辑处理可以对其进行调整。 
                                 </div>
                             </div>
+                        </li>
+                        <li class="child-wrap">
+                            <div class="panel panel-default">
+                                <div class="panel-bd capitalize">
+                                    javascript包含公共库及第三方插件以及页面js文件。 
+                                </div>
+                            </div>    
+                        </li>
+                        <li class="child-wrap">
+                            <div class="panel panel-default">
+                                <div class="panel-bd">
+                                    <span class="text-info capitalize">images</span>文件为模板所需图片文件；<span class="text-info capitalize">upload</span>为测试图片，亲们可根据项目定义路径。 
+                                </div>
+                            </div>    
+                        </li>
+                        <li class="child-wrap">
+                            <div class="panel panel-default">
+                                <div class="panel-bd">
+                                    正式项目可以文件进行实际操作时直接归置到该模板的根目录下即可，而<span class="text-danger capitalize">现在所看到的仅为demo演示而已</span>，<span class="text-muted">可对其删除</span>。
+                                </div>
+                            </div>    
                         </li>
                     </ul>
                 </div>
-                <div class="flow-layout col-1">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>订单</h5>
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-xs btn-white active">天</button>
-                                    <button type="button" class="btn btn-xs btn-white">月</button>
-                                    <button type="button" class="btn btn-xs btn-white">年</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ibox-content">
-                            <div class="row">
-                                <div class="col-sm-9">
-                                    <div class="flot-chart">
-                                        <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <ul class="stat-list">
-                                        <li>
-                                            <h2 class="no-margins">2,346</h2>
-                                            <small>订单总数</small>
-                                            <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i>
-                                            </div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 48%;" class="progress-bar"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <h2 class="no-margins ">4,422</h2>
-                                            <small>最近一个月订单</small>
-                                            <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i>
-                                            </div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 60%;" class="progress-bar"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <h2 class="no-margins ">9,180</h2>
-                                            <small>最近一个月销售额</small>
-                                            <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i>
-                                            </div>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 22%;" class="progress-bar"></div>
-                                            </div>
-                                        </li>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </div>
             </div>
+            
+            
             <script>
-                $(document).ready(function(){$(".chart").easyPieChart({barColor:"#f8ac59",scaleLength:5,lineWidth:4,size:80});$(".chart2").easyPieChart({barColor:"#1c84c6",scaleLength:5,lineWidth:4,size:80});var data2=[[gd(2012,1,1),7],[gd(2012,1,2),6],[gd(2012,1,3),4],[gd(2012,1,4),8],[gd(2012,1,5),9],[gd(2012,1,6),7],[gd(2012,1,7),5],[gd(2012,1,8),4],[gd(2012,1,9),7],[gd(2012,1,10),8],[gd(2012,1,11),9],[gd(2012,1,12),6],[gd(2012,1,13),4],[gd(2012,1,14),5],[gd(2012,1,15),11],[gd(2012,1,16),8],[gd(2012,1,17),8],[gd(2012,1,18),11],[gd(2012,1,19),11],[gd(2012,1,20),6],[gd(2012,1,21),6],[gd(2012,1,22),8],[gd(2012,1,23),11],[gd(2012,1,24),13],[gd(2012,1,25),7],[gd(2012,1,26),9],[gd(2012,1,27),9],[gd(2012,1,28),8],[gd(2012,1,29),5],[gd(2012,1,30),8],[gd(2012,1,31),25]];var data3=[[gd(2012,1,1),800],[gd(2012,1,2),500],[gd(2012,1,3),600],[gd(2012,1,4),700],[gd(2012,1,5),500],[gd(2012,1,6),456],[gd(2012,1,7),800],[gd(2012,1,8),589],[gd(2012,1,9),467],[gd(2012,1,10),876],[gd(2012,1,11),689],[gd(2012,1,12),700],[gd(2012,1,13),500],[gd(2012,1,14),600],[gd(2012,1,15),700],[gd(2012,1,16),786],[gd(2012,1,17),345],[gd(2012,1,18),888],[gd(2012,1,19),888],[gd(2012,1,20),888],[gd(2012,1,21),987],[gd(2012,1,22),444],[gd(2012,1,23),999],[gd(2012,1,24),567],[gd(2012,1,25),786],[gd(2012,1,26),666],[gd(2012,1,27),888],[gd(2012,1,28),900],[gd(2012,1,29),178],[gd(2012,1,30),555],[gd(2012,1,31),993]];var dataset=[{label:"订单数",data:data3,color:"#1ab394",bars:{show:true,align:"center",barWidth:24*60*60*600,lineWidth:0}},{label:"付款数",data:data2,yaxis:2,color:"#464f88",lines:{lineWidth:1,show:true,fill:true,fillColor:{colors:[{opacity:0.2},{opacity:0.2}]}},splines:{show:false,tension:0.6,lineWidth:1,fill:0.1},}];var options={xaxis:{mode:"time",tickSize:[3,"day"],tickLength:0,axisLabel:"Date",axisLabelUseCanvas:true,axisLabelFontSizePixels:12,axisLabelFontFamily:"Arial",axisLabelPadding:10,color:"#838383"},yaxes:[{position:"left",max:1070,color:"#838383",axisLabelUseCanvas:true,axisLabelFontSizePixels:12,axisLabelFontFamily:"Arial",axisLabelPadding:3},{position:"right",clolor:"#838383",axisLabelUseCanvas:true,axisLabelFontSizePixels:12,axisLabelFontFamily:" Arial",axisLabelPadding:67}],legend:{noColumns:1,labelBoxBorderColor:"#000000",position:"nw"},grid:{hoverable:false,borderWidth:0,color:"#838383"}};function gd(year,month,day){return new Date(year,month-1,day).getTime()}var previousPoint=null,previousLabel=null;$.plot($("#flot-dashboard-chart"),dataset,options);var mapData={"US":298,"SA":200,"DE":220,"FR":540,"CN":120,"AU":760,"BR":550,"IN":200,"GB":120,};$("#world-map").vectorMap({map:"world_mill_en",backgroundColor:"transparent",regionStyle:{initial:{fill:"#e4e4e4","fill-opacity":0.9,stroke:"none","stroke-width":0,"stroke-opacity":0}},series:{regions:[{values:mapData,scale:["#1ab394","#22d6b1"],normalizeFunction:"polynomial"}]},})});
+                //分页
+                $(".pagination").createPage({
+                    pageCount:5,
+                    current:1,
+                    backFn:function(p){
+                        console.log(p);
+                    }
+                });
+                //demo1
+                var dom = document.getElementById("demo1");
+                var myChart = echarts.init(dom);
+                var app = {};
+                option = null;
+                function randomData() {
+                    now = new Date(+now + oneDay);
+                    value = value + Math.random() * 21 - 10;
+                    return {
+                        name: now.toString(),
+                        value: [
+                            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+                            Math.round(value)
+                        ]
+                    }
+                }
+            
+                var data = [];
+                var now = +new Date(1997, 9, 3);
+                var oneDay = 24 * 3600 * 1000;
+                var value = Math.random() * 1000;
+                for (var i = 0; i < 1000; i++) {
+                    data.push(randomData());
+                }
+            
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        formatter: function (params) {
+                            params = params[0];
+                            var date = new Date(params.name);
+                            return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
+                        },
+                        axisPointer: {
+                            animation: false
+                        }
+                    },
+                    xAxis: {
+                        type: 'time',
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        boundaryGap: [0, '100%'],
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    series: [{
+                        name: '模拟数据',
+                        type: 'line',
+                        showSymbol: false,
+                        hoverAnimation: false,
+                        data: data
+                    }]
+                };
+            
+                setInterval(function () {
+            
+                    for (var i = 0; i < 5; i++) {
+                        data.shift();
+                        data.push(randomData());
+                    }
+            
+                    myChart.setOption({
+                        series: [{
+                            data: data
+                        }]
+                    });
+                }, 1000);;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+                
+                //demo2
+                var dom = document.getElementById("demo2");
+                var myChart = echarts.init(dom);
+                var app = {};
+                option = null;
+                option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['周一','周二','周三','周四','周五','周六','周日']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name:'邮件营销',
+                            type:'line',
+                            stack: '总量',
+                            data:[120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name:'联盟广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[220, 182, 191, 234, 290, 330, 310]
+                        },
+                        {
+                            name:'视频广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[150, 232, 201, 154, 190, 330, 410]
+                        },
+                        {
+                            name:'直接访问',
+                            type:'line',
+                            stack: '总量',
+                            data:[320, 332, 301, 334, 390, 330, 320]
+                        },
+                        {
+                            name:'搜索引擎',
+                            type:'line',
+                            stack: '总量',
+                            data:[820, 932, 901, 934, 1290, 1330, 1320]
+                        }
+                    ]
+                };
+                ;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }    
             </script>
             <!--开始::结束-->
         </main>

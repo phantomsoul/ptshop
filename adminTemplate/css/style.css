@@ -1125,7 +1125,7 @@ a:active {
   width: 20%;
 }
 .flow-layout {
-  column-gap: 10px;
+  column-gap: 30px;
 }
 .flow-layout .child-wrap {
   column-break-inside: avoid;
@@ -1303,9 +1303,9 @@ progress::-webkit-progress-value {
 }
 .panel {
   border: solid 1px transparent;
-  background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
-  margin-bottom: 10px;
+  background-color: #fbfbfb;
+  box-shadow: 2px 4px 10px rgba(126, 142, 159, 0.1);
+  margin-bottom: 30px;
   border-radius: 0;
 }
 .panel .panel-hd {
@@ -1747,13 +1747,13 @@ dialog [class^="icon-"] {
   color: white;
 }
 .btn-info {
-  background: #76d4f5;
-  border-color: #76d4f5;
+  background: #1ab394;
+  border-color: #1ab394;
   color: white;
 }
 .btn-info:hover {
-  border-color: #46c5f2;
-  background: #46c5f2;
+  border-color: #23c6c8;
+  background: #23c6c8;
 }
 .btn-info-outline {
   background-color: transparent;
@@ -2157,4 +2157,98 @@ textarea:focus {
 }
 .field-title.dashed {
   border-top-style: dashed;
+}
+/*===================欢迎页===================*/
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fbfbfb;
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
+}
+.ibox-title h5 {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 0 7px;
+  padding: 0;
+  text-overflow: ellipsis;
+}
+.ibox-title .label {
+  margin-left: 4px;
+}
+.float-e-margins .btn{
+  margin-bottom:5px
+}
+.pull-right {
+    float: right;
+}
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  text-shadow: none;
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label-primary {
+    background-color: #1c84c6;
+    color: #FFF;
+}
+.label-info {
+    background-color: #5bc0de;
+    color: #FFF;
+}
+.label-success {
+    background-color: #5cb85c;
+    color: #FFF;
+}
+.label-danger {
+    background-color: #ed5565;
+    color: #FFF;
+}
+.ibox-content {
+  clear: both;
+  background-color: #fbfbfb;
+  color: inherit;
+  padding: 15px 20px 0;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+.no-margins {
+  margin: 0;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+}
+.stat-percent {
+    float: right;
+}
+.font-bold {
+  font-weight: 600;
 }
