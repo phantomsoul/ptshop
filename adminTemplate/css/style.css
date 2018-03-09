@@ -2252,3 +2252,34 @@ h1 {
 .font-bold {
   font-weight: 600;
 }
+/*欢迎页统计图*/
+.col-sm-9 {
+  width: 75%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.flot-chart {
+  display: block;
+  height: 200px;
+}
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+.progress-mini, .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 0;
+}
+.progress-mini, .progress-small {
+  margin-top: 5px;
+}
+.progress-bar {
+  background-color: #1ab394;
+}
+.bootstrap-progress {
+  overflow: hidden;
+  border-radius: 4px;
+}
