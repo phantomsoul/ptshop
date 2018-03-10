@@ -1061,6 +1061,9 @@ a:active {
 .text-danger {
   color: #d9534f!important;
 }
+.text-navy {
+  color: #1ab394!important;
+}
 /*===================公共布局结构类===================*/
 .main-wrap {
   width: 100%;
@@ -2160,7 +2163,7 @@ textarea:focus {
 }
 /*===================欢迎页===================*/
 .ibox {
-  /*clear: both;*/
+  clear: both;
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
@@ -2300,21 +2303,6 @@ h1 {
   background-color: #f3f6fb;
   border-bottom: none;
 }
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.col-sm-4{
-  width:33.33333333%;
-}
-.col-sm-6 {
-    width: 50%;
-}
-.col-sm-8 {
-    width: 66.66666667%;
-}
 .ibox-heading h3 {
     font-weight: 200;
     font-size: 24px;
@@ -2328,13 +2316,99 @@ h1 {
 .feed-element, .media-body {
     overflow: hidden;
 }
-.feed-element, .feed-element .media {
-    margin-top: 15px;
-}
 .feed-element {
     padding-bottom: 15px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
 }
 .row:before {
     display: table;
     content: " ";
+}
+.transaction h3{
+  padding-left: 10px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.transaction h3 span, .sales-ranking h3 span {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+.goods-state.a-line {
+  padding: 0 0 30px;
+}
+.goods-state {
+  overflow: hidden;
+  text-align: center;
+}
+.goods-state.order ul li {
+    width: 14%;
+}
+.goods-state ul li {
+    float: left;
+    width: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.goods-state ul li a {
+    display: block;
+}
+.goods-state ul li a strong {
+    font-size: 22px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #0072D2;
+    display: block;
+    margin: 10px 0;
+}
+.goods-state ul li a span {
+    color: #4f5f6f;
+}
+.transaction table tr td strong {
+    color: #333333;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.transaction table tr td span {
+    display: block;
+    margin-top: 10px;
+    color: #999999;
+}
+.transaction table, .sales-ranking table {
+    width: 100%;
+    text-align: center;
+}
+.sales-ranking table tr td {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 12px;
+}
+.frist {
+    color: #ed5565;
+    font-weight: bold;
+    font-size: 14px;
+}
+.second {
+    color: #FF9800;
+    font-weight: bold;
+    font-size: 14px;
+}
+.third {
+    color: #03A9F4;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sales-ranking table tr td a {
+    color: #333333;
 }
