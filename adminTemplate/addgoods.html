@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统-HTML5后台管理系统</title>
+<meta name="keywords"  content="设置关键词..." />
+<meta name="description" content="设置描述..." />
+<meta name="author" content="DeathGhost" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<link rel="icon" href="images/icon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="javascript/jquery.js"></script>
+<script src="javascript/plug-ins/customScrollbar.min.js"></script>
+<script src="javascript/plug-ins/echarts.min.js"></script>
+<script src="javascript/plug-ins/layerUi/layer.js"></script>
+<script src="editor/ueditor.config.js"></script>
+<script src="editor/ueditor.all.js"></script>
+<script src="javascript/plug-ins/pagination.js"></script>
+<script src="javascript/public.js"></script>
+</head>
+<body>
+<div class="main-wrap">
+    <div class="side-nav">
+        <div class="side-logo">
+            <div class="logo">
+                <span class="logo-ico">
+                    <i class="i-l-1"></i>
+                    <i class="i-l-2"></i>
+                    <i class="i-l-3"></i>
+                </span>
+                <strong>PTshop后台管理</strong>
+            </div>
+        </div>
+        
+        <nav class="side-menu content mCustomScrollbar" data-mcs-theme="minimal-dark">
+            <h2>
+                <a href="index.html" class="InitialPage"><i class="icon-guanli"></i>欢迎页</a>
+            </h2>
+            <h2>
+                <a href="data.html" class="InitialPage"><i class="icon-dashboard"></i>数据概况</a>
+            </h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-shangpin"></i>商品管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd><a href="goods-table.html">商品列表</a></dd>
+                        <dd><a href="addgoods.html">商品发布</a></dd>
+                        <dd><a href="">商品分类</a></dd>
+                        <dd><a href="">虚拟商品类型</a></dd>
+                        <dd><a href="">商品品牌</a></dd>
+                        <dd><a href="">商品标签</a></dd>
+                        <dd><a href="">商品规格</a></dd>
+                        <dd><a href="">供货商</a></dd>
+                        <dd><a href="">商品类型</a></dd>
+                        <dd><a href="">咨询管理</a></dd>
+                        <dd><a href="">商品评价</a></dd>
+                        <dd><a href="">相册管理</a></dd>
+                        <dd><a href="">商品回收站</a></dd>
+                        <dd><a href="">批量上传</a></dd>
+                        <dd><a href="">批量导出</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-dingdanguanli"></i>订单管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">订单列表</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">缺货登记</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">发货单列表</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">快递单列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-yingxiaohuodong"></i>营销管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">优惠券</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">积分管理</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">秒杀活动</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">组合套餐</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">满额包邮</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">奖励规则</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">互动游戏</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-huiyuan2"></i>会员管理<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">会员列表</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">会员等级</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">积分详情</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">余额详情</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-weixin"></i>微信<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">公众号管理</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">微信菜单管理</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">推广二维码</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-fenxiao"></i>分销<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">推广员管理</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">商品分销</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">三级分销</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">区域代理</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">股东分红</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-xitong"></i>设置<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">基础设置</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">交易设置</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">物流配送</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">数据库配送</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">管理员列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-xitongshiti"></i>系统<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">模块列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-columns"></i>页面基础布局<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="flex-layout.html">弹性盒子布局</a>
+                        </dd>
+                        <dd>
+                            <a href="flow-layout.html">瀑布流布局</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-inbox"></i>按钮UI<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="button.html">基础按钮</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-table"></i>表格UI<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="table.html">基础表格</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-list-alt"></i>表单UI<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="form.html">表单结构样式</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-external-link"></i>弹出窗口<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="popups.html">基础弹出层</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-bar-chart"></i>百度统计echarts图表<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="echarts.html">echarts统计图表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-font"></i>文本编辑器<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="ueditor.html">百度UEDITOR编辑器</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-road"></i>进度条<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="progress.html">progress进度条兼容</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-tags"></i>Tab选项卡<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="tab.html">Tab选项卡</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-filter"></i>下拉菜单<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="button-dropdown.html">按钮式下拉菜单</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-sitemap"></i>页面分组标题<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="title.html">页面标题</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-columns"></i>分页<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="paging.html">jquery分页效果</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-spinner"></i>旋转动画<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="animation.html">刷新加载动画</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-fighter-jet"></i>面包屑导航<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="breadcrumb.html">面包屑</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-laptop"></i>文本面板<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="text-panel.html">文本面板</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-leaf"></i>块引用<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="blockquote.html">块引用</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <i class="icon-star"></i>第三方弹窗组件<i class="icon-angle-right"></i>
+                        </dt>
+                        <dd>
+                            <a href="layer.html">web弹层组件</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+        
+        <footer class="side-footer">© DeathGhost 版权所有</footer>
+        
+    </div>
+    <div class="content-wrap">
+        <header class="top-hd">
+            <div class="hd-lt">
+                <a class="icon-reorder"></a>
+            </div>
+            <div class="hd-rt">
+                <ul>
+                    <li>
+                        <a href="http://www.deathghost.cn" target="_blank"><i class="icon-home"></i>前台访问</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-random"></i>清除缓存</a>
+                    </li>
+                    <li>
+                        <a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+                    </li>
+                    <li>
+                        <a><i class="icon-bell-alt"></i>系统消息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="JsSignOut"><i class="icon-signout"></i>安全退出</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main-cont content mCustomScrollbar">
+            <div class="page-wrap">
+                <!--开始::内容-->
+                <section class="page-hd">
+                    <header>
+                        <h2 class="title">添加新商品</h2>
+                        <p class="title-description">
+                            输入商品的名称、商品促销语、关键词、商品品牌、供货商、市场价、销售价、成本价、基础销量、基础点击数、基础分享数、商家编码、生产日期、保质期、天数、总库存、库存预警、阶梯优惠等基本信息。
+                        </p>
+                    </header>
+                    <hr>
+                </section>
+                    <div class="panel-bd">
+                        <div class="card">
+                            <div class="card-header">
+                                <ul class="tab-nav">
+                                    <li class="active">商品信息</li>
+                                    <li>商品类型</li>
+                                    <li>商品图片</li>
+                                    <li>商品详情</li>
+                                    <li>物流信息</li>
+                                    <li>积分购买设置</li>
+                                    <li>其他信息</li>
+                                </ul>
+                            </div>
+                            <div class="tab-cont" style="display: block;">
+                                <div class="form-group-col-2">
+                                    <div class="form-label">商品名称：</div>
+                                        <div class="form-cont">
+                                            <input type="text" placeholder="请输入商品名称，不能超过60个字" class="form-control form-boxed" oninput="
+                        if(value.length>60){value=value.slice(0,60);$(this).next().text('商品名称不能超过60个字符').show();}else{$(this).next().hide();}">
+                                            <span class="help-inline"></span>
+                                         </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">商品分类：</div>
+                                    <div class="form-cont">
+                                        <select style="width:auto;">
+                                            <option>商品分类</option>
+                                            <option>女装</option>
+                                            <option>男装</option>
+                                        </select>
+                                        <select style="width:auto;">
+                                            <option>子分类</option>
+                                            <option>上装</option>
+                                            <option>下装</option>
+                                        </select>
+                                    </div>    
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">条形码：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="请输入商品的条形码" class="form-control form-boxed" oninput="
+                                        if(value.length>=32){value=value.slice(0,33);$(this).next().text('条形码不能超过32个字符').show();}else{$(this).next().hide();}">
+                                        <span class="help-inline"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">商品品牌：</div>
+                                        <div class="btn-drop-group">
+                                            <button class="btn btn-secondary dropdown-toggle">请选择商品品牌</button>
+                                                <div class="drop-list">
+                                                    <ul>
+                                                        <li><a href="#">帮宝适</a></li>
+                                                        <li><a href="#">好奇</a></li>
+                                                        <li><a href="#">贝亲</a></li>
+                                                        <li><a href="#">好孩子</a></li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">积分兑换：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="is_integral" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_integral"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">预售商品：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="is_presell" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_presell"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">自提商品：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">商品保税：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="is_bonded" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_bonded"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">市场价：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">销售价：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">成本价：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">商品税费：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">基础销量：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">基础点击数：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">总库存：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">库存预警：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group-col-2">
+                                    <div class="form-label">库存显示：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="stock" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="stock"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">是否上架：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="shelves" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="shelves"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label"></div>
+                                    <div class="form-cont">
+                                        <input type="submit" class="btn btn-primary" value="提交表单" />
+                                        <input type="reset" class="btn btn-disabled" value="禁止" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent222
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent333
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent444
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent555
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent666
+                            </div>
+                            <div class="tab-cont">
+                                TABcontent777
+                            </div>
+                        </div>
+                    </div>
+                
+                <!--开始::结束-->
+            </div>
+        </main>
+        <footer class="btm-ft">
+            <p class="clear">
+                <span class="fl">©Copyright 2016 <a href="http://www.deathghost.cn" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
+                <span class="fr text-info">
+                    <em class="uppercase">
+                        <i class="icon-user"></i>
+                        author:deathghost
+                    </em> | 
+                    <em class="uppercase"><i class="icon-envelope-alt"></i>
+                        deathGhost@deathGhost.cn
+                    </em>
+                    <a onclick="reciprocate()" class="text-primary"><i class="icon-qrcode"></i>捐赠</a>
+                </span>
+            </p>
+        </footer>
+    </div>
+</div>
+
+<div class="mask"></div>
+<div class="dialog">
+    <div class="dialog-hd">
+        <strong class="lt-title">标题</strong>
+        <a class="rt-operate icon-remove JclosePanel" title="关闭"></a>
+    </div>
+    <div class="dialog-bd">
+        <!--start::-->
+        <p>这里是基础弹窗,可以定义文本信息，HTML信息这里是基础弹窗,可以定义文本信息，HTML信息。</p>
+        <!--end::-->
+    </div>
+    <div class="dialog-ft">
+        <button class="btn btn-info JyesBtn">确认</button>
+        <button class="btn btn-secondary JnoBtn">关闭</button>
+    </div>
+</div>
+</body>
+</html>

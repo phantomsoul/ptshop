@@ -66,7 +66,7 @@
   color: inherit;
 }
 a {
-  color: #969696;
+  color: #244b69;
 }
 a:hover {
   color: #33be85;
@@ -1329,7 +1329,7 @@ progress::-webkit-progress-value {
   color: #7e8e9f;
 }
 .panel.panel-default .panel-bd {
-  border-color: white;
+  border-color: #e7eaec;
 }
 .panel.panel-primary {
   border-color: #3bb4f2;
@@ -1354,7 +1354,7 @@ progress::-webkit-progress-value {
   border-color: #4bcf99;
 }
 .pagination {
-  text-align: left;
+  text-align: right;
   color: #ccc;
   -webkit-user-select: none;
 }
@@ -1888,7 +1888,7 @@ dialog [class^="icon-"] {
   padding: 6px 15px!important;
   font-size: 14px !important;
   display: inline-block;
-  width: 100%;
+  width: 70%;
   color: #55595c;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2062,7 +2062,6 @@ textarea:focus {
 }
 .table th,
 .table td {
-  font-size: 12px;
   padding: 10px;
   line-height: 1.5;
   vertical-align: top;
@@ -2136,7 +2135,7 @@ textarea:focus {
 }
 .card .tab-cont {
   display: none;
-  padding: 10px 5px;
+  padding: 25px 5px;
   overflow: hidden;
 }
 /*===================分组标题===================*/
@@ -2185,9 +2184,9 @@ textarea:focus {
     padding: 14px 15px 7px;
     min-height: 48px;
 }
-.ibox-title h5 {
+.ibox-title h3 {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 7px;
   padding: 0;
   text-overflow: ellipsis;
@@ -2411,4 +2410,29 @@ h1 {
 }
 .sales-ranking table tr td a {
     color: #333333;
+}
+/*===================商品列表===================*/
+.pagediv {
+    padding: 15px;
+    margin-bottom: 30px;
+}
+/*===================发布商品===================*/
+.help-inline {
+  display: none;
+  color: red;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+.add-on {
+  line-height: 34px;
+  background-color: #e6e6e6;
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  border: solid #ccc;
+  border-width: 1px 1px 1px 0;
+  margin: 0 -4px 4px;
+  vertical-align: middle;
+  font-style: normal;
 }

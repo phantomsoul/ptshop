@@ -13,10 +13,10 @@
                 obj.empty();
                 //上一页
                 if(args.current > 1){
-                    obj.append('<a href="javascript:;" class="prevPage">上一页</a>');
+                    obj.append('<a href="javascript:;" class="beginPage">首页</a><a href="javascript:;" class="prevPage">上一页</a>');
                 }else{
                     obj.remove('.prevPage');
-                    obj.append('<span class="disabled">上一页</span>');
+                    obj.append('<span class="disabled">首页</span><span class="disabled">上一页</span>');
                 }
                 //中间页码
                 if(args.current != 1 && args.current >= 4 && args.pageCount != 4){
@@ -49,10 +49,10 @@
                 }
                 //下一页
                 if(args.current < args.pageCount){
-                    obj.append('<a href="javascript:;" class="nextPage">下一页</a>');
+                    obj.append('<a href="javascript:;" class="nextPage">下一页</a><a class="lastPage">末页</a>');
                 }else{
                     obj.remove('.nextPage');
-                    obj.append('<span class="disabled">下一页</span>');
+                    obj.append('<span class="disabled">下一页</span><span class="disabled">末页</span>');
                 }
             })();
         },
@@ -78,6 +78,22 @@
                 obj.on("click","a.nextPage",function(){
                     var current = parseInt(obj.children("span.current").text());
                     ms.fillHtml(obj,{"current":current+1,"pageCount":args.pageCount});
+                    if(typeof(args.backFn)=="function"){
+                        args.backFn(current+1);
+                    }
+                });
+                //首页
+                obj.on("click","a.beginPage",function(){
+                    var current = parseInt(obj.children("span.current").text());
+                    ms.fillHtml(obj,{"current":1,"pageCount":args.pageCount});
+                    if(typeof(args.backFn)=="function"){
+                        args.backFn(current+1);
+                    }
+                });
+                //末页
+                obj.on("click","a.lastPage",function(){
+                    var current = parseInt(obj.children("span.current").text());
+                    ms.fillHtml(obj,{"current":args.pageCount,"pageCount":args.pageCount});
                     if(typeof(args.backFn)=="function"){
                         args.backFn(current+1);
                     }
