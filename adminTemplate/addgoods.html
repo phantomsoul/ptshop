@@ -462,17 +462,13 @@
                                 </div>
                                 <div class="form-group-col-2">
                                     <div class="form-label">商品品牌：</div>
-                                        <div class="btn-drop-group">
-                                            <button class="btn btn-secondary dropdown-toggle">请选择商品品牌</button>
-                                                <div class="drop-list">
-                                                    <ul>
-                                                        <li><a href="#">帮宝适</a></li>
-                                                        <li><a href="#">好奇</a></li>
-                                                        <li><a href="#">贝亲</a></li>
-                                                        <li><a href="#">好孩子</a></li>
-                                                    </ul>
-                                                </div>
-                                        </div>
+                                    <div class="form-cont">
+                                        <select style="width:auto;">
+                                            <option>请选择商品品牌</option>
+                                            <option>阿里</option>
+                                            <option>京东</option>
+                                        </select>
+                                    </div>    
                                 </div>
                                 <div class="form-group-col-2">
                                     <div class="form-label">积分兑换：</div>
@@ -613,11 +609,52 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="tab-cont">
-                                TABcontent222
-                            </div>
-                            <div class="tab-cont">
-                                TABcontent333
+                                <div class="block-goods-sku">
+                                    <nav>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="js-open-edit-sku-popup">编辑规格</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="js-batch-edit-sku">批量修改</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="js-clear-goods-sku">清空规格</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <h4 style="padding: 0 10px;font-weight: normal;font-size: 14px;">商品规格：</h4>
+                                    <div class="goods-sku-list">
+                                        <table class="table-class">
+                                            <colgroup>
+                                                <col width="50%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th align="left">商品规格</th>
+                                                    <th>销售价格</th>
+                                                    <th>市场价格</th>
+                                                    <th>成本价格</th>
+                                                    <th>库存</th>
+                                                    <th>商家编码</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <h4 style="padding: 10px 10px 0;font-weight: normal;font-size: 14px;display:none;" class="js-goods-attribute-block">商品属性：</h4>
+                                    <div class="goods-sku-attribute-block js-goods-attribute-block">
+                                        <table class="goods-sku-attribute js-goods-sku-attribute"></table>
+                                    </div>
                             </div>
                             <div class="tab-cont">
                                 TABcontent444

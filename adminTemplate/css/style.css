@@ -2436,3 +2436,32 @@ h1 {
   vertical-align: middle;
   font-style: normal;
 }
+.block-goods-sku nav {
+  overflow: hidden;
+  border-bottom: 1px solid #244b80;
+  margin-bottom: 10px;
+}
+.block-goods-sku nav li {
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 15px;
+  position: relative;
+}
+.block-goods-sku nav li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 15px;
+    top: 50%;
+    border-left: 1px solid #244b80;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.block-goods-sku nav li:last-child:after {
+    display: none;
+}
