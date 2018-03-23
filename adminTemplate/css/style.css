@@ -2465,3 +2465,56 @@ h1 {
 .block-goods-sku nav li:last-child:after {
     display: none;
 }
+.form-goods dl dt {
+  line-height: 30px;
+  color: #333;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: right;
+  display: inline-block;
+  width: 13%;
+  padding: 8px 1% 8px 0;
+  margin: 0;
+}
+.form-goods dl dd {
+  line-height: 30px;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  width: 80%;
+  padding: 8px 0 8px 1%;
+  border-left: solid 1px #e5e5e5;
+  min-height: 30px;
+}
+.goods-sku td:first-child {
+   text-align: center;
+   background: #FBFBFB;
+ }
+.goods-sku td, .goods-sku-attribute td {
+  padding: 4px;
+  border: 1px solid #e5e5e5;
+}
+caption, th, td {
+   font-weight: normal;
+   vertical-align: middle;
+ }
+.goods-sku .goods-sku-item {
+  display: inline-block;
+  margin: 8px;
+  position: relative;
+}
+.goods-sku .goods-sku-item span {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #E3E3E3;
+  border-radius: 3px;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

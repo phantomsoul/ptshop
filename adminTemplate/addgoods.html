@@ -10,6 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <link rel="icon" href="images/icon/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_582503_ag6z24jb6bcvj9k9.css" />
 <script src="javascript/jquery.js"></script>
 <script src="javascript/plug-ins/customScrollbar.min.js"></script>
 <script src="javascript/plug-ins/echarts.min.js"></script>
@@ -610,51 +611,173 @@
                                 </div>
                             </div>
 
-                            <div class="tab-cont">
-                                <div class="block-goods-sku">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:;" class="js-open-edit-sku-popup">编辑规格</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="js-batch-edit-sku">批量修改</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;" class="js-clear-goods-sku">清空规格</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <h4 style="padding: 0 10px;font-weight: normal;font-size: 14px;">商品规格：</h4>
-                                    <div class="goods-sku-list">
-                                        <table class="table-class">
-                                            <colgroup>
-                                                <col width="50%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                                <col width="10%">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th align="left">商品规格</th>
-                                                    <th>销售价格</th>
-                                                    <th>市场价格</th>
-                                                    <th>成本价格</th>
-                                                    <th>库存</th>
-                                                    <th>商家编码</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
+                            <div class="tab-cont form-goods">
+                                <dl>
+                                    <dt>商品类型：</dt>
+                                    <dd>
+                                        <div class="controls">
+                                            <select id="goodsType" data-flag="2" style="width: 220px;">
+                                                <option value="0" selected="selected">请选择商品类型</option>
+                                                <option value="2">四不像</option>
+                                            </select>
+                                            <span class="help-inline">请选择商品类型</span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="control-group js-goods-spec-block" style="">
+                                    <dt><span class="color-red"></span></dt>
+                                    <dd>
+                                        <table class="goods-sku js-goods-sku">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="text-align:left;">
+                                                        <h5 style="margin:0;padding:0;font-weight: normal;color: #FF8400;">
+                                                        操作提示</h5>
+                                                        <p style="color:#FF8400;font-size:12px;">1、双击规格值进行编辑操作(回车按钮保存)。</p>
+                                                        <p style="color:#FF8400;font-size:12px;">2、鼠标浮上图片时，可以进行预览。</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="js-spec-item goods-sku-block-4">
+                                                <td width="10%">尺码</td>
+                                                <td width="85%">
+                                                    <article class="goods-sku-item">
+                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="9">XXXL</span>
+                                                    </article>
+                                                    <article class="goods-sku-item">
+                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="10" class="">XXL</span></article>
+                                                    <article class="goods-sku-item">
+                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="11" class="">XL</span></article>
+                                                    <article class="goods-sku-item">
+                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="12" class="selected">L</span>
+                                                    </article>
+                                                    <a href="javascript:;" data-spec-name="尺码" data-spec-id="4" data-show-type="1" class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
+                                            </tr>
+                                            <tr class="js-spec-item goods-sku-block-5">
+                                                <td width="10%">材质</td>
+                                                <td width="85%">
+                                                    <article class="goods-sku-item"><span data-spec-name="材质"
+                                                                                          data-spec-id="5"
+                                                                                          data-spec-value-data=""
+                                                                                          data-spec-show-type="3"
+                                                                                          data-spec-value-id="13">金的</span>&nbsp;<i></i>&nbsp;<div
+                                                            class="js-goods-spec-value-img sku-img-check"
+                                                            data-html="true" data-container="body" data-placement="top"
+                                                            data-trigger="manual"><input type="hidden" id="goods_sku18"
+                                                                                         value=""><img
+                                                            src="/public/admin/images/goods/goods_sku_add.png"
+                                                            id="imggoods_sku18"></div>
+                                                    </article>
+                                                    <article class="goods-sku-item"><span data-spec-name="材质"
+                                                                                          data-spec-id="5"
+                                                                                          data-spec-value-data=""
+                                                                                          data-spec-show-type="3"
+                                                                                          data-spec-value-id="14"
+                                                                                          class="selected">银的</span>&nbsp;<i></i>&nbsp;<div
+                                                            class="js-goods-spec-value-img sku-img-check"
+                                                            data-html="true" data-container="body" data-placement="top"
+                                                            data-trigger="manual"><input type="hidden" id="goods_sku19"
+                                                                                         value=""><img
+                                                            src="/public/admin/images/goods/goods_sku_add.png"
+                                                            id="imggoods_sku19"></div>
+                                                    </article>
+                                                    <article class="goods-sku-item"><span data-spec-name="材质"
+                                                                                          data-spec-id="5"
+                                                                                          data-spec-value-data=""
+                                                                                          data-spec-show-type="3"
+                                                                                          data-spec-value-id="15">玉的</span>&nbsp;<i></i>&nbsp;<div
+                                                            class="js-goods-spec-value-img sku-img-check"
+                                                            data-html="true" data-container="body" data-placement="top"
+                                                            data-trigger="manual"><input type="hidden" id="goods_sku20"
+                                                                                         value=""><img
+                                                            src="/public/admin/images/goods/goods_sku_add.png"
+                                                            id="imggoods_sku20"></div>
+                                                    </article>
+                                                    <article class="goods-sku-item"><span data-spec-name="材质"
+                                                                                          data-spec-id="5"
+                                                                                          data-spec-value-data=""
+                                                                                          data-spec-show-type="3"
+                                                                                          data-spec-value-id="16">琉璃的</span>&nbsp;<i></i>&nbsp;<div
+                                                            class="js-goods-spec-value-img sku-img-check"
+                                                            data-html="true" data-container="body" data-placement="top"
+                                                            data-trigger="manual"><input type="hidden" id="goods_sku21"
+                                                                                         value=""><img
+                                                            src="/public/admin/images/goods/goods_sku_add.png"
+                                                            id="imggoods_sku21"></div>
+                                                    </article>
+                                                    <a href="javascript:;" data-spec-name="材质" data-spec-id="5"
+                                                       data-show-type="3"
+                                                       class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
+                                            </tr>
+                                            <tr class="js-spec-item goods-sku-block-3">
+                                                <td width="10%">颜色</td>
+                                                <td width="85%">
+                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
+                                                                                          data-spec-id="3"
+                                                                                          data-spec-value-data="#ff0000"
+                                                                                          data-spec-show-type="2"
+                                                                                          data-spec-value-id="6"
+                                                                                          class="selected">红色</span>&nbsp;<i></i>&nbsp;<div>
+                                                        <input type="color" name="goods_spec_value2" value="#ff0000">
+                                                    </div>
+                                                    </article>
+                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
+                                                                                          data-spec-id="3"
+                                                                                          data-spec-value-data="#80ff80"
+                                                                                          data-spec-show-type="2"
+                                                                                          data-spec-value-id="7"
+                                                                                          class="selected">绿色</span>&nbsp;<i></i>&nbsp;<div>
+                                                        <input type="color" name="goods_spec_value3" value="#80ff80">
+                                                    </div>
+                                                    </article>
+                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
+                                                                                          data-spec-id="3"
+                                                                                          data-spec-value-data="#ffff00"
+                                                                                          data-spec-show-type="2"
+                                                                                          data-spec-value-id="8"
+                                                                                          class="selected">黄色</span>&nbsp;<i></i>&nbsp;<div>
+                                                        <input type="color" name="goods_spec_value4" value="#ffff00">
+                                                    </div>
+                                                    </article>
+                                                    <a href="javascript:;" data-spec-name="颜色" data-spec-id="3"
+                                                       data-show-type="2"
+                                                       class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="js-spec-add"><a href="javascript:;"
+                                                                           class="js-goods-spec-add goods-sku-add-text"
+                                                                           style="padding:0;">添加规格</a></td>
+                                                <td></td>
+                                            </tr>
+                                            </tbody>
                                         </table>
-                                    </div>
-                                    
-                                    <h4 style="padding: 10px 10px 0;font-weight: normal;font-size: 14px;display:none;" class="js-goods-attribute-block">商品属性：</h4>
-                                    <div class="goods-sku-attribute-block js-goods-attribute-block">
-                                        <table class="goods-sku-attribute js-goods-sku-attribute"></table>
-                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl class="control-group js-spec-table" name="skuTable" style="">
+                                    <dt><span class="color-red"></span>商品库存：</dt>
+                                    <dd>
+                                        <div class="controls">
+                                            <div class="js-goods-stock control-group" style="font-size: 14px; margin-top: 10px;">
+                                                <div id="stock-region" class="sku-group">
+                                                    <table class="table-sku-stock">
+                                                        <thead><tr><th class="text-center">材质</th><th class="text-center">颜色</th><th class="text-center">尺码</th><th class="th-price">销售价（元）</th><th class="th-price">市场价（元）</th><th class="th-price">成本价（元）</th><th class="th-stock">库存</th><th class="th-code">商家编码</th><th class="text-right">销量</th></tr></thead>
+                                                        <tbody><tr skuid="5:14;3:7;4:12"><td rowspan="3" skuchild="5:14">银的</td><td rowspan="1" skuchild="5:14;3:7">绿色</td><td rowspan="1" skuchild="5:14;3:7;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr><tr skuid="5:14;3:6;4:12"><td rowspan="1" skuchild="5:14;3:6">红色</td><td rowspan="1" skuchild="5:14;3:6;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr><tr skuid="5:14;3:8;4:12"><td rowspan="1" skuchild="5:14;3:8">黄色</td><td rowspan="1" skuchild="5:14;3:8;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr></tbody>
+                                                        <tfoot><tr><td colspan="9" style="text-align:left;"><div class="batch-opts">批量设置：<span class="js-batch-type">	<a class="js-batch-price" href="javascript:;">销售价</a>&nbsp;&nbsp;	<a class="js-batch-market_price" href="javascript:;">市场价</a>&nbsp;&nbsp;	<a class="js-batch-cost_price" href="javascript:;">成本价</a>&nbsp;&nbsp;	<a class="js-batch-stock" href="javascript:;">库存</a>	<a class="js-batch-merchant-code" href="javascript:;">商家编码</a>	</span>	<span class="js-batch-form" style="display:none;"><input type="text" maxlength="11" class="js-batch-txt input-mini" style="width:100px;margin:0;">&nbsp;&nbsp;<a class="js-batch-save goods-sku-add" href="javascript:;" style="margin-right:10px;">保存</a><a class="js-batch-cancel goods-sku-cancle" href="javascript:;">取消</a><p class="help-desc"></p></span></div></td></tr></tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="control-group js-goods-attribute-block" style="">
+                                    <dt><span class="color-red"></span>商品属性：</dt>
+                                    <dd>
+                                        <div class="controls">
+                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"><tbody><tr style="padding-top:15px;padding-bottom:15px;"><td width="10%" style="border:1px solid #E9E9E9;" align="right" class="txt12" data-value="产地">产地</td><td width="80%" style="border:1px solid #E9E9E9;"><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="美国" class="js-attribute-checkbox" id="checkbox_value_item2-0" data-attribute-value-id="2" data-attribute-value="产地" name="checkbox_value_item0" data-attribute-sort="0" checked="checked">&nbsp;<label for="checkbox_value_item2-0">美国</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="英国" class="js-attribute-checkbox" id="checkbox_value_item2-1" data-attribute-value-id="2" data-attribute-value="产地" name="checkbox_value_item0" data-attribute-sort="0">&nbsp;<label for="checkbox_value_item2-1">英国</label></div></td></tr><tr style="padding-top:15px;padding-bottom:15px;"><td width="10%" style="border:1px solid #E9E9E9;" align="right" class="txt12" data-value="尺码">尺码</td><td width="80%" style="border:1px solid #E9E9E9;"><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XXXL" class="js-attribute-checkbox" id="checkbox_value_item3-0" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1">&nbsp;<label for="checkbox_value_item3-0">XXXL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XXL" class="js-attribute-checkbox" id="checkbox_value_item3-1" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1">&nbsp;<label for="checkbox_value_item3-1">XXL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XL" class="js-attribute-checkbox" id="checkbox_value_item3-2" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1" checked="checked">&nbsp;<label for="checkbox_value_item3-2">XL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="L" class="js-attribute-checkbox" id="checkbox_value_item3-3" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1" checked="checked">&nbsp;<label for="checkbox_value_item3-3">L</label></div></td></tr></tbody></table>
+                                        </div>
+                                    </dd>
+                                </dl>
                             </div>
                             <div class="tab-cont">
                                 TABcontent444
