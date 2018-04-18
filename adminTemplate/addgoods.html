@@ -19,6 +19,7 @@
 <script src="editor/ueditor.all.js"></script>
 <script src="javascript/plug-ins/pagination.js"></script>
 <script src="javascript/public.js"></script>
+<script src="public/admin/js/goods/release_good_second.js"></script>
 </head>
 <body>
 <div class="main-wrap">
@@ -49,7 +50,7 @@
                         </dt>
                         <dd><a href="goods-table.html">商品列表</a></dd>
                         <dd><a href="addgoods.html">商品发布</a></dd>
-                        <dd><a href="">商品分类</a></dd>
+                        <dd><a href="addgoodscategory.html">商品分类</a></dd>
                         <dd><a href="">虚拟商品类型</a></dd>
                         <dd><a href="">商品品牌</a></dd>
                         <dd><a href="">商品标签</a></dd>
@@ -421,6 +422,7 @@
                             <div class="card-header">
                                 <ul class="tab-nav">
                                     <li class="active">商品信息</li>
+                                    <li>商品分类</li>
                                     <li>商品类型</li>
                                     <li>商品图片</li>
                                     <li>商品详情</li>
@@ -434,7 +436,7 @@
                                     <div class="form-label">商品名称：</div>
                                         <div class="form-cont">
                                             <input type="text" placeholder="请输入商品名称，不能超过60个字" class="form-control form-boxed" oninput="
-                        if(value.length>60){value=value.slice(0,60);$(this).next().text('商品名称不能超过60个字符').show();}else{$(this).next().hide();}">
+                                            if(value.length>60){value=value.slice(0,60);$(this).next().text('商品名称不能超过60个字符').show();}else{$(this).next().hide();}">
                                             <span class="help-inline"></span>
                                          </div>
                                 </div>
@@ -450,6 +452,11 @@
                                             <option>子分类</option>
                                             <option>上装</option>
                                             <option>下装</option>
+                                        </select>
+                                        <select style="width:auto;">
+                                            <option>子分类</option>
+                                            <option>红色</option>
+                                            <option>蓝色</option>
                                         </select>
                                     </div>    
                                 </div>
@@ -610,187 +617,272 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="tab-cont form-goods">
                                 <dl>
-                                    <dt>商品类型：</dt>
+                                    <dt>商品分类：</dt>
                                     <dd>
-                                        <div class="controls">
-                                            <select id="goodsType" data-flag="2" style="width: 220px;">
-                                                <option value="0" selected="selected">请选择商品类型</option>
-                                                <option value="2">四不像</option>
-                                            </select>
-                                            <span class="help-inline">请选择商品类型</span>
-                                        </div>
+                                        <select id="goodsType">
+                                            <option value="0">请选择商品类型</option>
+                                            <option value="1">四不像</option>
+                                        </select>
+                                        <span class="help-inline">请选择商品类型</span>
                                     </dd>
                                 </dl>
-                                <dl class="control-group js-goods-spec-block" style="">
+                                <dl class="control-group js-goods-spec-block" style="display:none;">
                                     <dt><span class="color-red"></span></dt>
-                                    <dd>
-                                        <table class="goods-sku js-goods-sku">
-                                            <tbody>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <div style="text-align:left;">
-                                                        <h5 style="margin:0;padding:0;font-weight: normal;color: #FF8400;">
-                                                        操作提示</h5>
-                                                        <p style="color:#FF8400;font-size:12px;">1、双击规格值进行编辑操作(回车按钮保存)。</p>
-                                                        <p style="color:#FF8400;font-size:12px;">2、鼠标浮上图片时，可以进行预览。</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="js-spec-item goods-sku-block-4">
-                                                <td width="10%">尺码</td>
-                                                <td width="85%">
-                                                    <article class="goods-sku-item">
-                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="9">XXXL</span>
-                                                    </article>
-                                                    <article class="goods-sku-item">
-                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="10" class="">XXL</span></article>
-                                                    <article class="goods-sku-item">
-                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="11" class="">XL</span></article>
-                                                    <article class="goods-sku-item">
-                                                        <span data-spec-name="尺码" data-spec-id="4" data-spec-value-data="" data-spec-show-type="1" data-spec-value-id="12" class="selected">L</span>
-                                                    </article>
-                                                    <a href="javascript:;" data-spec-name="尺码" data-spec-id="4" data-show-type="1" class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
-                                            </tr>
-                                            <tr class="js-spec-item goods-sku-block-5">
-                                                <td width="10%">材质</td>
-                                                <td width="85%">
-                                                    <article class="goods-sku-item"><span data-spec-name="材质"
-                                                                                          data-spec-id="5"
-                                                                                          data-spec-value-data=""
-                                                                                          data-spec-show-type="3"
-                                                                                          data-spec-value-id="13">金的</span>&nbsp;<i></i>&nbsp;<div
-                                                            class="js-goods-spec-value-img sku-img-check"
-                                                            data-html="true" data-container="body" data-placement="top"
-                                                            data-trigger="manual"><input type="hidden" id="goods_sku18"
-                                                                                         value=""><img
-                                                            src="/public/admin/images/goods/goods_sku_add.png"
-                                                            id="imggoods_sku18"></div>
-                                                    </article>
-                                                    <article class="goods-sku-item"><span data-spec-name="材质"
-                                                                                          data-spec-id="5"
-                                                                                          data-spec-value-data=""
-                                                                                          data-spec-show-type="3"
-                                                                                          data-spec-value-id="14"
-                                                                                          class="selected">银的</span>&nbsp;<i></i>&nbsp;<div
-                                                            class="js-goods-spec-value-img sku-img-check"
-                                                            data-html="true" data-container="body" data-placement="top"
-                                                            data-trigger="manual"><input type="hidden" id="goods_sku19"
-                                                                                         value=""><img
-                                                            src="/public/admin/images/goods/goods_sku_add.png"
-                                                            id="imggoods_sku19"></div>
-                                                    </article>
-                                                    <article class="goods-sku-item"><span data-spec-name="材质"
-                                                                                          data-spec-id="5"
-                                                                                          data-spec-value-data=""
-                                                                                          data-spec-show-type="3"
-                                                                                          data-spec-value-id="15">玉的</span>&nbsp;<i></i>&nbsp;<div
-                                                            class="js-goods-spec-value-img sku-img-check"
-                                                            data-html="true" data-container="body" data-placement="top"
-                                                            data-trigger="manual"><input type="hidden" id="goods_sku20"
-                                                                                         value=""><img
-                                                            src="/public/admin/images/goods/goods_sku_add.png"
-                                                            id="imggoods_sku20"></div>
-                                                    </article>
-                                                    <article class="goods-sku-item"><span data-spec-name="材质"
-                                                                                          data-spec-id="5"
-                                                                                          data-spec-value-data=""
-                                                                                          data-spec-show-type="3"
-                                                                                          data-spec-value-id="16">琉璃的</span>&nbsp;<i></i>&nbsp;<div
-                                                            class="js-goods-spec-value-img sku-img-check"
-                                                            data-html="true" data-container="body" data-placement="top"
-                                                            data-trigger="manual"><input type="hidden" id="goods_sku21"
-                                                                                         value=""><img
-                                                            src="/public/admin/images/goods/goods_sku_add.png"
-                                                            id="imggoods_sku21"></div>
-                                                    </article>
-                                                    <a href="javascript:;" data-spec-name="材质" data-spec-id="5"
-                                                       data-show-type="3"
-                                                       class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
-                                            </tr>
-                                            <tr class="js-spec-item goods-sku-block-3">
-                                                <td width="10%">颜色</td>
-                                                <td width="85%">
-                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
-                                                                                          data-spec-id="3"
-                                                                                          data-spec-value-data="#ff0000"
-                                                                                          data-spec-show-type="2"
-                                                                                          data-spec-value-id="6"
-                                                                                          class="selected">红色</span>&nbsp;<i></i>&nbsp;<div>
-                                                        <input type="color" name="goods_spec_value2" value="#ff0000">
-                                                    </div>
-                                                    </article>
-                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
-                                                                                          data-spec-id="3"
-                                                                                          data-spec-value-data="#80ff80"
-                                                                                          data-spec-show-type="2"
-                                                                                          data-spec-value-id="7"
-                                                                                          class="selected">绿色</span>&nbsp;<i></i>&nbsp;<div>
-                                                        <input type="color" name="goods_spec_value3" value="#80ff80">
-                                                    </div>
-                                                    </article>
-                                                    <article class="goods-sku-item"><span data-spec-name="颜色"
-                                                                                          data-spec-id="3"
-                                                                                          data-spec-value-data="#ffff00"
-                                                                                          data-spec-show-type="2"
-                                                                                          data-spec-value-id="8"
-                                                                                          class="selected">黄色</span>&nbsp;<i></i>&nbsp;<div>
-                                                        <input type="color" name="goods_spec_value4" value="#ffff00">
-                                                    </div>
-                                                    </article>
-                                                    <a href="javascript:;" data-spec-name="颜色" data-spec-id="3"
-                                                       data-show-type="2"
-                                                       class="js-goods-spec-value-add goods-sku-add-text">添加规格值</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="js-spec-add"><a href="javascript:;"
-                                                                           class="js-goods-spec-add goods-sku-add-text"
-                                                                           style="padding:0;">添加规格</a></td>
-                                                <td></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </dd>
+                                    <dd><table class="goods-sku js-goods-sku"></table></dd>
                                 </dl>
-                                <dl class="control-group js-spec-table" name="skuTable" style="">
+                                <dl class="control-group js-spec-table" name="skuTable" style="display: none;">
                                     <dt><span class="color-red"></span>商品库存：</dt>
                                     <dd>
                                         <div class="controls">
                                             <div class="js-goods-stock control-group" style="font-size: 14px; margin-top: 10px;">
                                                 <div id="stock-region" class="sku-group">
                                                     <table class="table-sku-stock">
-                                                        <thead><tr><th class="text-center">材质</th><th class="text-center">颜色</th><th class="text-center">尺码</th><th class="th-price">销售价（元）</th><th class="th-price">市场价（元）</th><th class="th-price">成本价（元）</th><th class="th-stock">库存</th><th class="th-code">商家编码</th><th class="text-right">销量</th></tr></thead>
-                                                        <tbody><tr skuid="5:14;3:7;4:12"><td rowspan="3" skuchild="5:14">银的</td><td rowspan="1" skuchild="5:14;3:7">绿色</td><td rowspan="1" skuchild="5:14;3:7;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr><tr skuid="5:14;3:6;4:12"><td rowspan="1" skuchild="5:14;3:6">红色</td><td rowspan="1" skuchild="5:14;3:6;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr><tr skuid="5:14;3:8;4:12"><td rowspan="1" skuchild="5:14;3:8">黄色</td><td rowspan="1" skuchild="5:14;3:8;4:12">L</td><td><input type="text" name="sku_price" style="width: 80%;" class="js-price input-mini" maxlength="10" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">销售价最小为 0.01</span></td><td><input type="text" name="market_price" maxlength="10" style="width: 80%;" class="js-market-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">市场价最小为 0.01</span></td><td><input type="text" name="cost_price" maxlength="10" style="width: 80%;" class="js-cost-price" value="0"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">成本价最小为 0.01</span></td><td><input type="text" name="stock_num" class="js-stock-num input-mini" maxlength="9" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size:11px; color:#b94a48; display:none">库存不能为空</span></td><td><input type="text" name="code" class="js-code input-small" value=""></td><td class="text-right">0</td></tr></tbody>
-                                                        <tfoot><tr><td colspan="9" style="text-align:left;"><div class="batch-opts">批量设置：<span class="js-batch-type">	<a class="js-batch-price" href="javascript:;">销售价</a>&nbsp;&nbsp;	<a class="js-batch-market_price" href="javascript:;">市场价</a>&nbsp;&nbsp;	<a class="js-batch-cost_price" href="javascript:;">成本价</a>&nbsp;&nbsp;	<a class="js-batch-stock" href="javascript:;">库存</a>	<a class="js-batch-merchant-code" href="javascript:;">商家编码</a>	</span>	<span class="js-batch-form" style="display:none;"><input type="text" maxlength="11" class="js-batch-txt input-mini" style="width:100px;margin:0;">&nbsp;&nbsp;<a class="js-batch-save goods-sku-add" href="javascript:;" style="margin-right:10px;">保存</a><a class="js-batch-cancel goods-sku-cancle" href="javascript:;">取消</a><p class="help-desc"></p></span></div></td></tr></tfoot>
+                                                        <thead></thead>
+                                                        <tbody></tbody>
+                                                        <tfoot></tfoot>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="control-group js-goods-attribute-block" style="">
+                                <dl class="control-group js-goods-attribute-block" style="display:none;">
                                     <dt><span class="color-red"></span>商品属性：</dt>
                                     <dd>
                                         <div class="controls">
-                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"><tbody><tr style="padding-top:15px;padding-bottom:15px;"><td width="10%" style="border:1px solid #E9E9E9;" align="right" class="txt12" data-value="产地">产地</td><td width="80%" style="border:1px solid #E9E9E9;"><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="美国" class="js-attribute-checkbox" id="checkbox_value_item2-0" data-attribute-value-id="2" data-attribute-value="产地" name="checkbox_value_item0" data-attribute-sort="0" checked="checked">&nbsp;<label for="checkbox_value_item2-0">美国</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="英国" class="js-attribute-checkbox" id="checkbox_value_item2-1" data-attribute-value-id="2" data-attribute-value="产地" name="checkbox_value_item0" data-attribute-sort="0">&nbsp;<label for="checkbox_value_item2-1">英国</label></div></td></tr><tr style="padding-top:15px;padding-bottom:15px;"><td width="10%" style="border:1px solid #E9E9E9;" align="right" class="txt12" data-value="尺码">尺码</td><td width="80%" style="border:1px solid #E9E9E9;"><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XXXL" class="js-attribute-checkbox" id="checkbox_value_item3-0" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1">&nbsp;<label for="checkbox_value_item3-0">XXXL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XXL" class="js-attribute-checkbox" id="checkbox_value_item3-1" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1">&nbsp;<label for="checkbox_value_item3-1">XXL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="XL" class="js-attribute-checkbox" id="checkbox_value_item3-2" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1" checked="checked">&nbsp;<label for="checkbox_value_item3-2">XL</label></div><div class="goods-sku-attribute-item-checkbox"><input type="checkbox" value="L" class="js-attribute-checkbox" id="checkbox_value_item3-3" data-attribute-value-id="3" data-attribute-value="尺码" name="checkbox_value_item1" data-attribute-sort="1" checked="checked">&nbsp;<label for="checkbox_value_item3-3">L</label></div></td></tr></tbody></table>
+                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"></table>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="tab-cont form-goods">
+                                <dl>
+                                    <dt>商品类型：</dt>
+                                    <dd>
+                                        <select id="goodsType">
+                                            <option value="0">请选择商品类型</option>
+                                            <option value="1">四不像</option>
+                                        </select>
+                                        <span class="help-inline">请选择商品类型</span>
+                                    </dd>
+                                </dl>
+                                <dl class="control-group js-goods-spec-block" style="display:none;">
+                                    <dt><span class="color-red"></span></dt>
+                                    <dd><table class="goods-sku js-goods-sku"></table></dd>
+                                </dl>
+                                <dl class="control-group js-spec-table" name="skuTable" style="display: none;">
+                                    <dt><span class="color-red"></span>商品库存：</dt>
+                                    <dd>
+                                        <div class="controls">
+                                            <div class="js-goods-stock control-group" style="font-size: 14px; margin-top: 10px;">
+                                                <div id="stock-region" class="sku-group">
+                                                    <table class="table-sku-stock">
+                                                        <thead></thead>
+                                                        <tbody></tbody>
+                                                        <tfoot></tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="control-group js-goods-attribute-block" style="display:none;">
+                                    <dt><span class="color-red"></span>商品属性：</dt>
+                                    <dd>
+                                        <div class="controls">
+                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"></table>
                                         </div>
                                     </dd>
                                 </dl>
                             </div>
                             <div class="tab-cont">
-                                TABcontent444
+                                <h3 class="js-goods-img">商品图片</h3>
+                                <dl>
+                                    <dt><i class="required">*</i>商品图片：</dt>
+                                    <dd>
+                                        <div id="goods_picture_box"class="controls" style="background-color:#FFF;border: 1px solid #E9E9E9;">
+                                            <div class="ncsc-goods-default-pic">
+                                                <div class="goodspic-uplaod" style="padding: 15px;">
+                                                    <div class='img-box' style="min-height:160px;">
+                                                        <div class="upload-thumb" id="default_uploadimg">
+                                                            <img src="public/admin/images/album/default_goods_image_240.gif">
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <span class="img-error">最少需要一张图片作为商品主图</span>
+                                                    <p class="hint">上传商品图片，<font color="red">第一张图片将作为商品主图</font>,支持同时上传多张图片,多张图片之间可随意调整位置；支持jpg、gif、png格式上传或从图片空间中选择，建议使用尺寸800x800像素以上、大小不超过1M的正方形图片，上传后的图片将会自动保存在图片空间的默认分类中。</p>
+                                                    <div class="handle">
+                                                        <div class="ncsc-upload-btn">
+                                                            <a href="javascript:void(0);">
+									<span>
+										<input style="cursor:pointer;font-size:0;" type="file" id="fileupload" hidefocus="true" class="input-file" name="file_upload"multiple="multiple" />
+									</span>
+                                                                <p>图片上传</p>
+                                                            </a>
+                                                        </div>
+                                                        <a class="ncsc-btn mt5" id="img_box" nctype="show_image" href="javascript:void(0);">从图片空间选择</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="help-inline">最少需要一张图片作为商品主图</span>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <style>
+                                .upload-thumb{
+                                    display:block !important;
+                                    float:left;
+                                    width:147px !important;
+                                    height:147px !important;
+                                    position:relative;
+                                }
+                                .upload-thumb img{
+                                    width:100%;
+                                    height:100%;
+                                }
+                                .img-box, .sku-img-box{
+                                    overflow:hidden;
+                                }
+                                .off-box, .sku-off-box{
+                                    position:absolute;
+                                    width:18px;
+                                    height:18px;
+                                    right:0;
+                                    top:0;
+                                    line-height: 18px;
+                                    background-color:#FFF;
+                                    cursor:pointer;
+                                    text-align: center;
+                                }
+
+                                .black-bg{
+                                    position:absolute;
+                                    right:0;
+                                    top:0;
+                                    left:0;
+                                    bottom:0;
+                                    background-color:rgba(0,0,0,0.3);
+                                }
+                                .img-error{
+                                    color:red;
+                                    height:25px;
+                                    line-height:25px;
+                                    display:none;
+                                }
+                            </style>
+
+                            <div class="tab-cont">
+                                <h3 class="js-goods_detail">商品详情</h3>
+                                <dl>
+                                    <dt><i class="require">*</i>商品描述：</dt>
+                                    <dd>
+                                        <div class="controls" id="discripContainer">
+                                            <textare id="tareProductDiscrip" name="discripArea" style="height: 500px; width: 800px; display: none;"></textare>
+                                            <script id="editor" type="text/plain" style="width: 100%; height: 500px;"></script>
+                                            <span class="help-inline">请填写商品描述</span>
+                                        </div>
+                                    </dd>
+                                </dl>
                             </div>
                             <div class="tab-cont">
-                                TABcontent555
-                            </div>
+                                <dl>
+                                    <dt>所在地：</dt>
+                                            <dd>
+                                            <select id="provinceSelect" onchange="getProvince(this,'#citySelect',-1)">
+                                                <option value="0">请选择省</option>
+                                                </select>
+                                            <select id="citySelect">
+                                            <option value="0">请选择市</option>
+                                            </select>
+                                            </dd>
+                                                </dl>
+                                                <dl>
+                                                <dt><i class="required">*</i>运费：</dt>
+                                            <dd>
+                                            <div class="controls">
+                                                <label class="radio inline normal"><input type="radio" name="fare" value="0" checked="checked" />免邮</label>
+                                                <label class="radio inline normal"><input type="radio" name="fare" value="1" />买家承担运费</label>
+                                                <span class="help-inline">请选择运费类型</span>
+                                                </div>
+                                                </dd>
+                                                </dl>
+                                                <dl id="valuation-method" style="display: none">
+                                                <dt><i class="required">*</i>计价方式：</dt>
+                                            <dd>
+                                            <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="3" checked="checked" />计件</label>
+                                                <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="2" />体积</label>
+                                                <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="1" />重量</label>
+                                                </dd>
+                                                </dl>
+                                                <dl id="commodity-weight" style="display: none">
+                                                <dt><i class="required">*</i>商品重量：</dt>
+                                            <dd>
+                                            <input type="number" class="goods-stock" id="goods_weight" min="0" value="0" />公斤
+                                                <span class="help-inline">商品重量必须大于0</span>
+                                                </dd>
+                                                </dl>
+                                                <dl id="commodity-volume" style="display: none">
+                                                <dt><i class="required">*</i>商品体积：</dt>
+                                            <dd>
+                                            <input type="number" class="goods-stock" id="goods_volume" min="0" value="0" />立方米
+                                                <span class="help-inline">商品体积必须大于0</span>
+                                                </dd>
+                                                </dl>
+                                                <dl id="express_Company" style="display: none;">
+                                                <dt>物流公司：</dt>
+                                            <dd>
+                                            <select id="expressCompany">
+                                                <option value="0">请选择物流公司</option>
+                                                <option value="3">多岁的</option>
+                                                <option value="4">顺丰</option>
+                                                </select>
+                                                </dd>
+                                                </dl>
+                                                <dl>
+                                                <dt><i class="required">*</i>库存显示：</dt>
+                                            <dd>
+                                            <div class="controls">
+                                                <label class="radio inline normal"><input type="radio" name="stock" checked="checked" value="1" />是</label>
+                                                <label class="radio inline normal"><input type="radio" name="stock" value="0" />否</label>
+                                                <span class="help-inline">请选择库存是否显示</span>
+                                                </div>
+                                                </dd>
+                                                </dl>
+
+                                                </div>
                             <div class="tab-cont">
-                                TABcontent666
-                            </div>
-                            <div class="tab-cont">
-                                TABcontent777
-                            </div>
+                                                <dl>
+                                                <dt><i class="required">*</i>积分设置：</dt>
+                                            <dd>
+                                            <div class="controls">
+                                                <label class="radio inline normal"><input type="radio" name="integralSelect" value="0" checked="checked" />非积分兑换</label>
+                                                <label class="radio inline normal"><input type="radio" name="integralSelect" value="1" />积分兑换</label>
+                                                </div>
+                                                </dd>
+                                                </dl>
+                                                <dl id="integral-exchange" style="display: none">
+                                                <dt>积分兑换：</dt>
+                                            <dd>
+                                            <div class="controls">
+                                                <input id="integration_available_use" class="input-mini" placeholder="0" min="0" type="number" onchange="integrationChange(this);" />&nbsp;积分
+                                            <span class="help-inline">请设置积分</span>
+                                                </div>
+                                                </dd>
+                                                </dl>
+                                                <dl>
+                                                <dt>购买可赠送：</dt>
+                                            <dd>
+                                            <div class="controls">
+                                                <input id="integration_available_give" class="input-mini" placeholder="0" min="0" type="number" onchange="integrationChange(this);" />&nbsp;积分
+                                            </div>
+                                            </dd>
+                                            </dl>
+
+                                            </div>
                         </div>
                     </div>
                 
@@ -799,7 +891,7 @@
         </main>
         <footer class="btm-ft">
             <p class="clear">
-                <span class="fl">©Copyright 2016 <a href="http://www.deathghost.cn" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
+                <span class="fl">©Copyright 2022 <a href="http://www.deathghost.cn" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
                 <span class="fr text-info">
                     <em class="uppercase">
                         <i class="icon-user"></i>
