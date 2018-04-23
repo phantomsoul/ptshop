@@ -414,33 +414,42 @@
                             罗列所有商品的基本信息，包括商品名称、条形码、市场价格、会员价、商品利润、是否上架/新品/精品/热销、排序库存、和一些基本操作。
                         </p>
                     </header>
-                    <hr>
-                </section>
-                <div class="clear mt-20">
+                    <nav class="ns-third-menu">
+                        <ul>
+                            <li class="selected" onclick="location.href='#';">出售中</li>
+                            <li onclick="location.href='#';">已下架</li>
+                            <li onclick="location.href='#';">库存预警</li>
+                            <li onclick="location.href='#';">回收站</li>
+                        </ul>
+                    </nav>
+                    <div class="clear mt-20">
                     <tr class="cen">
                         <td>
-                            <button class="btn btn-info radius">发布商品</button>
+                            <button class="btn-sm btn-info radius">发布商品</button>
                         </td>
                         <td>
-                            <button class="btn btn-info radius size-l">已下架</button>
+                            <button class="btn-sm btn-info-outline radius size-l">批量删除</button>
                         </td>
                         <td>
-                            <button class="btn btn-info radius size-l">库存预警</button>
+                            <button class="btn-sm btn-info-outline radius size-l">上架</button>
                         </td>
                         <td>
-                            <button class="btn btn-info radius size-l">回收站</button>
+                            <button class="btn-sm btn-info-outline radius size-l">下架</button>
+                        </td>
+                        <td>
+                            <button class="btn-sm btn-info-outline radius size-l">推荐</button>
                         </td>
                     </tr>
                     <div class="fr input-group">
                         <input type="text" class="form-control" placeholder="搜索..." style="width:290px;"/>
                         <button class="btn btn-warning">搜索</button>
                     </div>
-                </div>
-                <hr style="border: 0 none;border-top: 1px #d7dde4 solid;height: 1px;margin: 10px 0;width: 30%;" />
+                    </div>
+                </section>
                 <table class="table mb-15 mt-20">
                     <thead>
                         <tr>
-                            <th><input type="checkbox"/></th>
+                            <th><input onclick="CheckAll(this)" type="checkbox"/></th>
                             <th>商品名称</th>
                             <th>条形码</th>
                             <th>市场价格</th>
@@ -469,7 +478,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -487,7 +496,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -505,7 +514,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -523,25 +532,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
-                                <a title="删除">删除</a>
-                            </td>
-                        </tr>
-                        <tr class="cen">
-                            <td><input type="checkbox"/></td>
-                            <td class="lt"><a href="#">正宗陕西洛川红富士 新鲜水果特惠</a></td>
-                            <td>8809313491329</td>
-                            <td>￥4.00</td>
-                            <td>￥3.80</td>
-                            <td>￥6.23</td>
-                            <td>已上架</td>
-                            <td><i class="icon-duigou"></i></td>
-                            <td><i class="icon-duigou"></i></td>
-                            <td><i class="icon-iconclose"></i></td>
-                            <td>200</td>
-                            <td>
-                                <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -559,7 +550,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -577,7 +568,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -595,7 +586,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -613,7 +604,7 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -631,7 +622,25 @@
                             <td>200</td>
                             <td>
                                 <a title="编辑" class="mr-5">编辑</a>
-                                <a title="复制" class="mr-5">复制</a>
+                                <a title="下架" class="mr-5">下架</a>
+                                <a title="删除">删除</a>
+                            </td>
+                        </tr>
+                        <tr class="cen">
+                            <td><input type="checkbox"/></td>
+                            <td class="lt"><a href="#">正宗陕西洛川红富士 新鲜水果特惠</a></td>
+                            <td>8809313491329</td>
+                            <td>￥4.00</td>
+                            <td>￥3.80</td>
+                            <td>￥6.23</td>
+                            <td>已上架</td>
+                            <td><i class="icon-duigou"></i></td>
+                            <td><i class="icon-duigou"></i></td>
+                            <td><i class="icon-iconclose"></i></td>
+                            <td>200</td>
+                            <td>
+                                <a title="编辑" class="mr-5">编辑</a>
+                                <a title="下架" class="mr-5">下架</a>
                                 <a title="删除">删除</a>
                             </td>
                         </tr>
@@ -668,6 +677,12 @@
             // console.log(p);
         }
     });
+
+    //全选
+    function CheckAll(event){
+        var checked = event.checked;
+        $(".table input[type = 'checkbox']").prop("checked",checked);
+    }
 </script>
 </body>
 </html>

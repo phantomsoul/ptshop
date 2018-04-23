@@ -1702,6 +1702,21 @@ dialog [class^="icon-"] {
   white-space: nowrap;
   cursor: pointer;
 }
+.btn-sm {
+  -webkit-user-select: none;
+  padding: 4px 9px!important;
+  font-size: 12px !important;
+  display: inline-block;
+  border: none;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 2px !important;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+}
 .btn.radius {
   border-radius: 2px;
 }
@@ -2416,6 +2431,33 @@ h1 {
     padding: 15px;
     margin-bottom: 30px;
 }
+.ns-third-menu {
+   overflow: hidden;
+}
+.ns-third-menu ul {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #d7dde4;
+}
+.ns-third-menu ul li:first-child {
+    margin-left: 0;
+}
+.ns-third-menu ul li.selected {
+    color: #1ab394;
+    border-bottom-color: #1ab394;
+}
+.ns-third-menu ul li {
+    float: left;
+    background: #ffffff;
+    margin: 10px 10px 0;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+    padding: 0 8px 8px 8px;
+}
+.ns-third-menu ul li:hover {
+    color: #1ab394;
+}
 /*===================发布商品===================*/
 .help-inline {
   display: none;
@@ -2643,3 +2685,4 @@ button.close {
   margin-right: 10px;
   vertical-align: middle;
 }
+
