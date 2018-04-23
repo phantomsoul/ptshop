@@ -5,7 +5,7 @@
 <title>后台管理系统-HTML5后台管理系统</title>
 <meta name="keywords"  content="设置关键词..." />
 <meta name="description" content="设置描述..." />
-<meta name="author" content="DeathGhost" />
+<meta name="author" content="Kyle.Y" />
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <link rel="icon" href="images/icon/favicon.ico" type="image/x-icon">
@@ -51,7 +51,6 @@
                         <dd><a href="goods-table.html">商品列表</a></dd>
                         <dd><a href="addgoods.html">商品发布</a></dd>
                         <dd><a href="addgoodscategory.html">商品分类</a></dd>
-                        <dd><a href="">虚拟商品类型</a></dd>
                         <dd><a href="">商品品牌</a></dd>
                         <dd><a href="">商品标签</a></dd>
                         <dd><a href="">商品规格</a></dd>
@@ -377,7 +376,7 @@
             </ul>
         </nav>
         
-        <footer class="side-footer">© DeathGhost 版权所有</footer>
+        <footer class="side-footer">© deathGhost 版权所有</footer>
         
     </div>
     <div class="content-wrap">
@@ -388,13 +387,13 @@
             <div class="hd-rt">
                 <ul>
                     <li>
-                        <a href="http://www.deathghost.cn" target="_blank"><i class="icon-home"></i>前台访问</a>
+                        <a href="http://www.deathGhost.cn" target="_blank"><i class="icon-home"></i>前台访问</a>
                     </li>
                     <li>
                         <a><i class="icon-random"></i>清除缓存</a>
                     </li>
                     <li>
-                        <a><i class="icon-user"></i>管理员:<em>DeathGhost</em></a>
+                        <a><i class="icon-user"></i>管理员:<em>deathGhost</em></a>
                     </li>
                     <li>
                         <a><i class="icon-bell-alt"></i>系统消息</a>
@@ -422,18 +421,16 @@
                             <div class="card-header">
                                 <ul class="tab-nav">
                                     <li class="active">商品信息</li>
-                                    <li>商品分类</li>
-                                    <li>商品类型</li>
-                                    <li>商品图片</li>
-                                    <li>商品详情</li>
-                                    <li>物流信息</li>
-                                    <li>积分购买设置</li>
-                                    <li>其他信息</li>
+                                    <li>商品规格</li>
+                                    <li>商品属性</li>
+                                    <li>媒体设置</li>
+                                    <li>模板设置</li>
                                 </ul>
                             </div>
                             <div class="tab-cont" style="display: block;">
+                                <h3>基础信息</h3>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">商品名称：</div>
+                                    <div class="form-label"><i class="text-danger">*</i>商品名称：</div>
                                         <div class="form-cont">
                                             <input type="text" placeholder="请输入商品名称，不能超过60个字" class="form-control form-boxed" oninput="
                                             if(value.length>60){value=value.slice(0,60);$(this).next().text('商品名称不能超过60个字符').show();}else{$(this).next().hide();}">
@@ -441,7 +438,7 @@
                                          </div>
                                 </div>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">商品分类：</div>
+                                    <div class="form-label"><i class="text-danger">*</i>商品分类：</div>
                                     <div class="form-cont">
                                         <select style="width:auto;">
                                             <option>商品分类</option>
@@ -491,32 +488,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="form-group-col-2">
-                                    <div class="form-label">预售商品：</div>
-                                    <div class="form-cont">
-                                        <label class="radio">
-                                            <input type="radio" name="is_presell" checked="checked"/>
-                                            <span>否</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="is_presell"/>
-                                            <span>是</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group-col-2">
-                                    <div class="form-label">自提商品：</div>
-                                    <div class="form-cont">
-                                        <label class="radio">
-                                            <input type="radio" name="is_belowline" checked="checked"/>
-                                            <span>否</span>
-                                        </label>
-                                        <label class="radio">
-                                            <input type="radio" name="is_belowline"/>
-                                            <span>是</span>
-                                        </label>
-                                    </div>
-                                </div>
+                                
+                                
                                 <div class="form-group-col-2">
                                     <div class="form-label">商品保税：</div>
                                     <div class="form-cont">
@@ -530,6 +503,63 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <div class="form-group-col-2">
+                                    <div class="form-label">基础销量：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <a class="add-on">件</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label">基础点击数：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <a class="add-on">次</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label"><i class="text-danger">*</i>总库存：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <a class="add-on">件</a>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label"><i class="text-danger">*</i>库存预警：</div>
+                                    <div class="form-cont">
+                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <a class="add-on">件</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group-col-2">
+                                    <div class="form-label"><i class="text-danger">*</i>库存显示：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="stock" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="stock"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group-col-2">
+                                    <div class="form-label"><i class="text-danger">*</i>是否上架：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="shelves" checked="checked"/>
+                                            <span>否</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="shelves"/>
+                                            <span>是</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <h3>购买信息</h3>
                                 <div class="form-group-col-2">
                                     <div class="form-label">市场价：</div>
                                     <div class="form-cont">
@@ -538,7 +568,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">销售价：</div>
+                                    <div class="form-label"><i class="text-danger">*</i>销售价：</div>
                                     <div class="form-cont">
                                         <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
                                         <a class="add-on">元</a>
@@ -559,148 +589,164 @@
                                     </div>
                                 </div>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">基础销量：</div>
+                                    <div class="form-label">每人限购：</div>
                                     <div class="form-cont">
-                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
                                     </div>
                                 </div>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">基础点击数：</div>
+                                    <div class="form-label">最少购买数：</div>
                                     <div class="form-cont">
-                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
+                                        <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                        <a class="add-on">元</a>
                                     </div>
                                 </div>
+                                <h3>预售设置</h3>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">总库存：</div>
-                                    <div class="form-cont">
-                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
-                                    </div>
-                                </div>
-                                <div class="form-group-col-2">
-                                    <div class="form-label">库存预警：</div>
-                                    <div class="form-cont">
-                                        <input type="text" placeholder="0" min="0" class="form-control form-boxed" style="width:100px;">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group-col-2">
-                                    <div class="form-label">库存显示：</div>
+                                    <div class="form-label">预售商品：</div>
                                     <div class="form-cont">
                                         <label class="radio">
-                                            <input type="radio" name="stock" checked="checked"/>
+                                            <input type="radio" name="is_presell" checked="checked"/>
                                             <span>否</span>
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="stock"/>
+                                            <input type="radio" name="is_presell"/>
                                             <span>是</span>
                                         </label>
                                     </div>
                                 </div>
+                                <h3>自提设置</h3>
                                 <div class="form-group-col-2">
-                                    <div class="form-label">是否上架：</div>
+                                    <div class="form-label">自提商品：</div>
                                     <div class="form-cont">
                                         <label class="radio">
-                                            <input type="radio" name="shelves" checked="checked"/>
+                                            <input type="radio" name="is_belowline" checked="checked"/>
                                             <span>否</span>
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="shelves"/>
+                                            <input type="radio" name="is_belowline"/>
                                             <span>是</span>
                                         </label>
+                                    </div>
+                                </div>
+                                <h3>积分设置</h3>
+                                <div class="form-group-col-2">
+                                    <div class="form-group-col-2">
+                                        <div class="form-label">最大可使用积分：</div>
+                                            <div class="form-cont">
+                                                <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                                <a class="add-on">分</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-label">积分兑换设置：</div>
+                                    <div class="form-cont">
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline" checked="checked"/>
+                                            <span>非积分兑换</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline"/>
+                                            <span>积分加现金购买</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline" checked="checked"/>
+                                            <span>积分兑换或直接购买</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="is_belowline" checked="checked"/>
+                                            <span>只支持积分兑换</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group-col-2">
+                                        <div class="form-label">兑换所需要积分：</div>
+                                            <div class="form-cont">
+                                                <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                                <a class="add-on">分</a>
+                                            </div>
+                                    </div>
+                                    <div class="form-group-col-2">
+                                        <div class="form-label">购买可赠送：</div>
+                                            <div class="form-cont">
+                                                <input type="text" placeholder="0.00" min="0" class="form-control form-boxed" style="width:200px;">
+                                                <a class="add-on">分</a>
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="form-group-col-2">
                                     <div class="form-label"></div>
                                     <div class="form-cont">
-                                        <input type="submit" class="btn btn-primary" value="提交表单" />
+                                        <input type="submit" class="btn btn-primary" value="保存" />
                                         <input type="reset" class="btn btn-disabled" value="禁止" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-cont form-goods">
-                                <dl>
-                                    <dt>商品分类：</dt>
-                                    <dd>
-                                        <select id="goodsType">
-                                            <option value="0">请选择商品类型</option>
-                                            <option value="1">四不像</option>
-                                        </select>
-                                        <span class="help-inline">请选择商品类型</span>
-                                    </dd>
-                                </dl>
-                                <dl class="control-group js-goods-spec-block" style="display:none;">
-                                    <dt><span class="color-red"></span></dt>
-                                    <dd><table class="goods-sku js-goods-sku"></table></dd>
-                                </dl>
-                                <dl class="control-group js-spec-table" name="skuTable" style="display: none;">
-                                    <dt><span class="color-red"></span>商品库存：</dt>
-                                    <dd>
-                                        <div class="controls">
-                                            <div class="js-goods-stock control-group" style="font-size: 14px; margin-top: 10px;">
-                                                <div id="stock-region" class="sku-group">
-                                                    <table class="table-sku-stock">
-                                                        <thead></thead>
-                                                        <tbody></tbody>
-                                                        <tfoot></tfoot>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl class="control-group js-goods-attribute-block" style="display:none;">
-                                    <dt><span class="color-red"></span>商品属性：</dt>
-                                    <dd>
-                                        <div class="controls">
-                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"></table>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="tab-cont form-goods">
-                                <dl>
-                                    <dt>商品类型：</dt>
-                                    <dd>
-                                        <select id="goodsType">
-                                            <option value="0">请选择商品类型</option>
-                                            <option value="1">四不像</option>
-                                        </select>
-                                        <span class="help-inline">请选择商品类型</span>
-                                    </dd>
-                                </dl>
-                                <dl class="control-group js-goods-spec-block" style="display:none;">
-                                    <dt><span class="color-red"></span></dt>
-                                    <dd><table class="goods-sku js-goods-sku"></table></dd>
-                                </dl>
-                                <dl class="control-group js-spec-table" name="skuTable" style="display: none;">
-                                    <dt><span class="color-red"></span>商品库存：</dt>
-                                    <dd>
-                                        <div class="controls">
-                                            <div class="js-goods-stock control-group" style="font-size: 14px; margin-top: 10px;">
-                                                <div id="stock-region" class="sku-group">
-                                                    <table class="table-sku-stock">
-                                                        <thead></thead>
-                                                        <tbody></tbody>
-                                                        <tfoot></tfoot>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </dd>
-                                </dl>
-                                <dl class="control-group js-goods-attribute-block" style="display:none;">
-                                    <dt><span class="color-red"></span>商品属性：</dt>
-                                    <dd>
-                                        <div class="controls">
-                                            <table class="goods-sku-attribute js-goods-sku-attribute" style="margin:0;"></table>
-                                        </div>
-                                    </dd>
-                                </dl>
+                            <div class="tab-cont">
+                                <!-- 商品规格 -->
+                                <div class="block-goods-sku">
+                                    <nav>
+                                        <button class="btn-sm btn-info-outline radius js-open-edit-sku-popup">编辑规格</button>
+                                        <button class="btn-sm btn-info-outline radius js-clear-goods-sku">清空规格</button>
+                                    </nav>
+                                    <div style="padding:10px;line-height: 30px;display: none;">
+                                        <table class="goods-sku js-goods-sku"></table>
+                                    </div>
+
+                                    <div class="volume-set-sku-info">
+                                        <span>批量设置：</span>
+                                        <a href="javascript:;" data-tag="sku-price">销售价格</a>&nbsp;&nbsp;
+                                        <a href="javascript:;" data-tag="market-price">市场价格</a>&nbsp;&nbsp;
+                                        <a href="javascript:;" data-tag="cost-price">成本价格</a>&nbsp;&nbsp;
+                                        <a href="javascript:;" data-tag="stock-num">库存</a>&nbsp;&nbsp;
+                                        <input type="text" class="input-common middle" />
+                                        <button class="btn-common">确定</button>
+                                        <button class="btn-common-cancle">取消</button>
+                                    </div>
+                                    <div class="goods-sku-list">
+            <table class="table-class">
+                <colgroup>
+                    <col width="50%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th align="left">商品规格</th>
+                        <th>
+                            <span>销售价格</span>
+<!--                            <input type="text" class="input-common short" /> -->
+<!--                            <a href="javascript:;" style="float:right;">编辑</a> -->
+                        </th>
+                        <th>
+                            <span>市场价格</span>
+<!--                            <a href="javascript:;" style="float:right;">编辑</a> -->
+                        </th>
+                        <th>
+                            <span>成本价格</span>
+<!--                            <a href="javascript:;" style="float:right;">编辑</a> -->
+                        </th>
+                        <th>
+                            <span>库存</span>
+<!--                            <a href="javascript:;" style="float:right;">编辑</a> -->
+                        </th>
+                        <th>
+                            <span>商家编码</span>
+<!--                            <a href="javascript:;" style="float:right;">编辑</a> -->
+                        </th>
+                    </tr>
+                </thead>
+                <tbody><tr skuid="12:117"><td align="left">111：颜色</td><td><input type="text" class="input-common middle js-price" maxlength="10" name="sku_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">销售价最小为 0.01</span></td><td><input type="text" class="input-common middle js-market-price" maxlength="10" name="market_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">市场价最小为 0.01</span></td><td><input type="text" class="input-common middle js-cost-price" maxlength="10" name="cost_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">成本价最小为 0.01</span></td><td><input type="text" class="input-common middle js-stock-num" maxlength="9" name="stock_num" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">库存不能为空</span></td><td><input type="text" class="input-common middle js-code" name="code" value=""></td></tr><tr skuid="12:118"><td align="left">111：尺寸</td><td><input type="text" class="input-common middle js-price" maxlength="10" name="sku_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">销售价最小为 0.01</span></td><td><input type="text" class="input-common middle js-market-price" maxlength="10" name="market_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">市场价最小为 0.01</span></td><td><input type="text" class="input-common middle js-cost-price" maxlength="10" name="cost_price" value="0.00"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">成本价最小为 0.01</span></td><td><input type="text" class="input-common middle js-stock-num" maxlength="9" name="stock_num" value="0" onkeyup="inputKeyUpNumberValue(this);" onafterpaste="inputAfterPasteNumberValue(this);"><span class="help-inline" style="font-size: 12px;color:#F44336;display: none;margin-top: 5px;text-align: left;padding: 2px 0 0 11px;">库存不能为空</span></td><td><input type="text" class="input-common middle js-code" name="code" value=""></td></tr></tbody>
+            </table>
+        </div>
+                                </div>
                             </div>
                             <div class="tab-cont">
                                 <h3 class="js-goods-img">商品图片</h3>
                                 <dl>
-                                    <dt><i class="required">*</i>商品图片：</dt>
+                                    <dt><i class="text-danger">*</i>商品图片：</dt>
                                     <dd>
                                         <div id="goods_picture_box"class="controls" style="background-color:#FFF;border: 1px solid #E9E9E9;">
                                             <div class="ncsc-goods-default-pic">
@@ -730,7 +776,6 @@
                                         <span class="help-inline">最少需要一张图片作为商品主图</span>
                                     </dd>
                                 </dl>
-
                             </div>
                             <style>
                                 .upload-thumb{
@@ -801,7 +846,7 @@
                                             </dd>
                                                 </dl>
                                                 <dl>
-                                                <dt><i class="required">*</i>运费：</dt>
+                                                <dt><i class="text-danger">*</i>运费：</dt>
                                             <dd>
                                             <div class="controls">
                                                 <label class="radio inline normal"><input type="radio" name="fare" value="0" checked="checked" />免邮</label>
@@ -811,7 +856,7 @@
                                                 </dd>
                                                 </dl>
                                                 <dl id="valuation-method" style="display: none">
-                                                <dt><i class="required">*</i>计价方式：</dt>
+                                                <dt><i class="text-danger">*</i>计价方式：</dt>
                                             <dd>
                                             <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="3" checked="checked" />计件</label>
                                                 <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="2" />体积</label>
@@ -819,14 +864,14 @@
                                                 </dd>
                                                 </dl>
                                                 <dl id="commodity-weight" style="display: none">
-                                                <dt><i class="required">*</i>商品重量：</dt>
+                                                <dt><i class="text-danger">*</i>商品重量：</dt>
                                             <dd>
                                             <input type="number" class="goods-stock" id="goods_weight" min="0" value="0" />公斤
                                                 <span class="help-inline">商品重量必须大于0</span>
                                                 </dd>
                                                 </dl>
                                                 <dl id="commodity-volume" style="display: none">
-                                                <dt><i class="required">*</i>商品体积：</dt>
+                                                <dt><i class="text-danger">*</i>商品体积：</dt>
                                             <dd>
                                             <input type="number" class="goods-stock" id="goods_volume" min="0" value="0" />立方米
                                                 <span class="help-inline">商品体积必须大于0</span>
@@ -843,7 +888,7 @@
                                                 </dd>
                                                 </dl>
                                                 <dl>
-                                                <dt><i class="required">*</i>库存显示：</dt>
+                                                <dt><i class="text-danger">*</i>库存显示：</dt>
                                             <dd>
                                             <div class="controls">
                                                 <label class="radio inline normal"><input type="radio" name="stock" checked="checked" value="1" />是</label>
@@ -856,7 +901,7 @@
                                                 </div>
                             <div class="tab-cont">
                                                 <dl>
-                                                <dt><i class="required">*</i>积分设置：</dt>
+                                                <dt><i class="text-danger">*</i>积分设置：</dt>
                                             <dd>
                                             <div class="controls">
                                                 <label class="radio inline normal"><input type="radio" name="integralSelect" value="0" checked="checked" />非积分兑换</label>
@@ -891,11 +936,11 @@
         </main>
         <footer class="btm-ft">
             <p class="clear">
-                <span class="fl">©Copyright 2022 <a href="http://www.deathghost.cn" title="DeathGhost" target="_blank">DeathGhost.cn</a></span>
+                <span class="fl">©Copyright 2022 <a href="http://www.deathGhost.cn" title="deathGhost" target="_blank">deathGhost.cn</a></span>
                 <span class="fr text-info">
                     <em class="uppercase">
                         <i class="icon-user"></i>
-                        author:deathghost
+                        author:deathGhost
                     </em> | 
                     <em class="uppercase"><i class="icon-envelope-alt"></i>
                         deathGhost@deathGhost.cn

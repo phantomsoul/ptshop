@@ -14,5 +14,5 @@
 »login.php
 //根目录开始您的项目文件部署...
 ..............................
-AUTHOR:DEATHGHOST |  DEATHGHOST@DEATHGHOST.CN
-来源：http://www.deathghost.cn
+AUTHOR:deathGhost |  deathGhost@deathGhost.CN
+来源：http://www.deathGhost.cn
