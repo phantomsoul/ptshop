@@ -1050,7 +1050,7 @@ a:active {
   color: #0275d8!important;
 }
 .text-success {
-  color: #5cb85c!important;
+  color: #33be85!important;
 }
 .text-info {
   color: #5bc0de!important;
@@ -2239,7 +2239,7 @@ textarea:focus {
     color: #FFF;
 }
 .label-success {
-    background-color: #5cb85c;
+    background-color: #33be85;
     color: #FFF;
 }
 .label-danger {
@@ -2662,5 +2662,27 @@ button.close {
     padding: 10px 0;
     height: 30px;
     line-height: 30px;
+    font-size: 14px;
+}
+.block-goods-sku .goods-sku-list {
+    text-align: center;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.table-class {
+    width: 100%;
+    background-color: #FFF;
+    max-width: 100%;
+    max-width: -webkit-calc(100% - 1px);
+    max-width: -moz-calc(100% - 1px);
+    max-width: calc(100% - 1px);
+}
+.table-class tr th {
+    background-color: #fafafa;
+    padding: 6px 6px;
+    border-top: 1px solid #E1E6F0;
+    border-bottom: 1px solid #E1E6F0;
+    background: #F2F6FC !important;
+    font-weight: normal;
     font-size: 14px;
 }
