@@ -23,6 +23,84 @@
 </head>
 <body>
 <div class="main-wrap">
+  <div class="edit-sku-popup-mask-layer"></div>
+                                    <div class="edit-sku-popup">
+                                        <header>
+                                            <h3>选择规格</h3>
+                                            <span>×</span>
+                                        </header>
+                                        <div class="edit-sku-popup-body">
+                                            <aside>
+                                                <p>选择规格 [可多选]</p>
+                                                <div class="js-attr-block">
+                                                    <select id="search_attr_id" class="select-common attr-search" onchange="getAttrSearchSelected(this);">
+                                                      <option value="0" selected>全部</option>
+                                                      <option value="1">女装</option>
+                                                      <option value="2">男装</option>
+                                                      <option value="3">箱包</option>
+                                                      <option value="4">电视</option>
+                                                      <option value="5">手机</option>
+                                                      <option value="6">笔记本</option>
+                                                      <option value="7">手机配件</option>
+                                                    </select>
+                                                </div>
+                                                <ul class="js-sku-list-popup">
+                                                    <li class="add-sku">
+                                                        <input type="text" class="input-common" placeholder="输入新规格名称">
+                                                        <i class="fa fa-plus"></i>
+                                                        <strong>添加新规格</strong>
+                                                    </li>
+                                                </ul>
+                                            </aside>
+                                            <article>
+                                                <p>选择规格值 [可多选]</p>
+                                                <div>
+                                                    
+                                                    <p class="empty-info">请选择左侧规格列表</p>
+                                                    
+                                                    <div class="sku-value-list">
+                                                        <label><input class="margin-small-right" id="checkAll" type="checkbox">全选</label>
+                                                        <div class="add-sku-value-input">
+                                                            <input type="text" class="input-common" placeholder="输入规格值名称(回车保存)" />
+                                                            <button class="btn-common">确定</button>
+                                                        </div>
+                                                        <ul></ul>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="edit-sku-batch-info">
+                                        <!-- 编辑规格价格、库存、商家编码信息 -->
+                                            <table class="table-class">
+                                                <tr>
+                                                    <th>销售价格</th>
+                                                    <th>市场价格</th>
+                                                    <th>成本价格</th>
+                                                    <th>库存</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="input-common js-sku-price middle" placeholder="销售价格" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="input-common js-market-price middle" placeholder="市场价格" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="input-common js-cost-price middle" placeholder="成本价格" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="input-common js-stock-num middle" placeholder="库存" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <footer>
+                                            <span class="box-spec-bottom">注意：改变规格会删除原有的规格数据，并生成新的规格数据。</span>
+                                            <button class="btn-common btn-big btn-top">生成</button>
+                                            <button class="btn-common-cancle btn-big btn-bottom">取消</button>
+                                        </footer>
+                                    </div>
     <div class="side-nav">
         <div class="side-logo">
             <div class="logo">
@@ -34,7 +112,6 @@
                 <strong>PTshop后台管理</strong>
             </div>
         </div>
-        
         <nav class="side-menu content mCustomScrollbar" data-mcs-theme="minimal-dark">
             <h2>
                 <a href="index.html" class="InitialPage"><i class="icon-guanli"></i>欢迎页</a>
@@ -735,87 +812,6 @@
                                             <tbody></tbody>
                                         </table>
                                     </div>
-
-                                    <div class="edit-sku-popup-mask-layer"></div>
-                                    <div class="edit-sku-popup" style="display: none;">
-                                        <header>
-                                            <h3>选择规格</h3>
-                                            <span>×</span>
-                                        </header>
-                                        <div class="edit-sku-popup-body">
-                                            <aside>
-                                                <p>选择规格 [可多选]</p>
-                                                <div class="js-attr-block">
-                                                    <select id="search_attr_id" class="select-common attr-search" onchange="getAttrSearchSelected(this);">
-                                                        <option value="0" selected>全部</option>
-                                                                                <option value="1">女装</option>
-                                                                                <option value="2">男装</option>
-                                                                                <option value="3">箱包</option>
-                                                                                <option value="4">电视</option>
-                                                                                <option value="5">手机</option>
-                                                                                <option value="6">笔记本</option>
-                                                                                <option value="7">手机配件</option>
-                                                                        </select>
-                                                </div>
-                                                <ul class="js-sku-list-popup">
-                                                    <li class="add-sku">
-                                                        <input type="text" class="input-common" placeholder="输入新规格名称">
-                                                        <i class="fa fa-plus"></i>
-                                                        <strong>添加新规格</strong>
-                                                    </li>
-                                                </ul>
-                                            </aside>
-                                            <article>
-                                                <p>选择规格值 [可多选]</p>
-                                                <div>
-                                                    
-                                                    <p class="empty-info">请选择左侧规格列表</p>
-                                                    
-                                                    <div class="sku-value-list">
-                                                        <label><input class="margin-small-right" id="checkAll" type="checkbox">全选</label>
-                                                        <div class="add-sku-value-input">
-                                                            <input type="text" class="input-common" placeholder="输入规格值名称(回车保存)" />
-                                                            <button class="btn-common">确定</button>
-                                                        </div>
-                                                        <ul></ul>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <div class="edit-sku-batch-info">
-                                        <!-- 编辑规格价格、库存、商家编码信息 -->
-                                            <table class="table-class">
-                                                <tr>
-                                                    <th>销售价格</th>
-                                                    <th>市场价格</th>
-                                                    <th>成本价格</th>
-                                                    <th>库存</th>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <input type="text" class="input-common js-sku-price middle" placeholder="销售价格" />
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="input-common js-market-price middle" placeholder="市场价格" />
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="input-common js-cost-price middle" placeholder="成本价格" />
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="input-common js-stock-num middle" placeholder="库存" />
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <footer>
-                                            <span class="box-spec-bottom">注意：改变规格会删除原有的规格数据，并生成新的规格数据。</span>
-                                            <button class="btn-common btn-big btn-top">生成</button>
-                                            <button class="btn-common-cancle btn-big btn-bottom">取消</button>
-                                        </footer>
-                                    </div>
-                                    <input type="hidden" id="goodsId" value="0" />
-
                                 </div>
                             </div>
                             <div class="tab-cont">

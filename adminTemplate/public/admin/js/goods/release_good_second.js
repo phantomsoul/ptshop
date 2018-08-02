@@ -81,30 +81,37 @@ function addAttrSearchBox(){
  * 根据商品类型id，查询商品规格信息  (单一只查询规格数据)
  */ 
 function getGoodsSpecList(attr_id,callBack){
-	// 	$.ajax({
-	// 		url : __URL(ADMINMAIN+"/goods/getGoodsSpecInfoQuery"),
-	// 		type : "post",
-	// 		data : { "attr_id" : parseInt(attr_id)},
-	// 		success : function(res){
-	// 			if(res !=-1){
-	// 				var sku_list_html = "";//规格弹出框列表
-	// 				var spec_length = res.spec_list.length;
-	// 				//商品规格集合(取消商品属性与商品规格的关系)
-	// 				if(spec_length>0){
-	// 					for(var i=0;i<spec_length;i++){
-	// 						var curr_spec = res.spec_list[i];
-	// 						sku_list_html += "<li data-spec-id="+ curr_spec.spec_id +" data-spec-value-json=" + JSON.stringify(curr_spec.values) + " data-spec-name='" + curr_spec.spec_name + "' data-show-type='" + curr_spec.show_type + "' data-spec-value-length='" + curr_spec.values.length + "'>" + curr_spec.spec_name + "<span>[" + 0 + "/" + curr_spec.values.length + "]</span></li>";
-	// 					}
-						
-	// 					//规格弹出框代码
-	// 					sku_list_html += '<li class="add-sku"><input type="text" class="input-common" placeholder="输入新规格名称"><i class="fa fa-plus"></i><strong>添加新规格</strong></li>';
-	// 					$(".js-sku-list-popup").html(sku_list_html);
-	// 				}
+    //     $.ajax({
+    //         url : __URL(ADMINMAIN+"/goods/getGoodsSpecInfoQuery"),
+    //         type : "post",
+    //         data : { "attr_id" : parseInt(attr_id)},
+    //         success : function(res){
+    //             if(res !=-1){
+    //                 var sku_list_html = "";//规格弹出框列表
+    //                 var spec_length = res.spec_list.length;
+    //                 //商品规格集合(取消商品属性与商品规格的关系)
+    //                 if(spec_length>0){
+    //                     for(var i=0;i<spec_length;i++){
+    //                         var curr_spec = res.spec_list[i];
+    //                         sku_list_html += "<li data-spec-id="+ curr_spec.spec_id +" data-spec-value-json=" + JSON.stringify(curr_spec.values) + " data-spec-name='" + curr_spec.spec_name + "' data-show-type='" + curr_spec.show_type + "' data-spec-value-length='" + curr_spec.values.length + "'>" + curr_spec.spec_name + "<span>[" + 0 + "/" + curr_spec.values.length + "]</span></li>";
+    //                     }
+                        
+    //                     //规格弹出框代码
+    //                     sku_list_html += '<li class="add-sku"><input type="text" class="input-common" placeholder="输入新规格名称"><i class="fa fa-plus"></i><strong>添加新规格</strong></li>';
+    //                     $(".js-sku-list-popup").html(sku_list_html);
+    //                 }
 
-	// 				editSkuData();
-	// 				$(".js-goods-spec-block").show();
+    //                 editSkuData();
+    //                 $(".js-goods-spec-block").show();
 
-	// 			}
-	// 		}
-	// })
+    //             }
+    //         }
+    // })
 }
+
+//关闭商品规格弹出框
+$(".edit-sku-popup header span,.edit-sku-popup footer .btn-bottom").click(function(){
+    $(".edit-sku-popup-mask-layer").fadeOut();
+    $(".edit-sku-popup").fadeOut();
+});
+
