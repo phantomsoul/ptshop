@@ -19,6 +19,7 @@
   <script src="editor/ueditor.all.js"></script>
   <script src="javascript/plug-ins/pagination.js"></script>
   <script src="javascript/public.js"></script>
+  <script src="https://cdn.bootcss.com/countup.js/1.9.3/countUp.js"></script>
 </head>
 <body>
 <div class="main-wrap">
@@ -422,7 +423,7 @@
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title"><span class="label label-primary pull-right">上个月</span><h3>收入</h3></div>
                                     <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
+                                        <h1 class="no-margins" id="sr"></h1>
                                         <div class="stat-percent font-bold text-primary">98%<i class="icon-tubiaoshangshengqushi"></i></div>
                                         <small>月收入</small>
                                     </div>    
@@ -434,7 +435,7 @@
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title"><span class="label label-success pull-right">今日</span><h3>订单</h3></div>
                                     <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
+                                        <h1 class="no-margins" id="dd">40,886,200</h1>
                                         <div class="stat-percent font-bold text-success">20%<i class="icon-tubiaoshangshengqushi"></i></div>
                                         <small>新订单</small>
                                     </div>
@@ -446,7 +447,7 @@
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title"><span class="label label-info pull-right">一周内</span><h3>访客</h3></div>
                                     <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
+                                        <h1 class="no-margins" id="fk">40,886,200</h1>
                                         <div class="stat-percent font-bold text-info">44%<i class="icon-tubiaoshangshengqushi"></i></div>
                                         <small>新访客</small>
                                     </div>
@@ -458,7 +459,7 @@
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title"><span class="label label-danger pull-right">到目前为止</span><h3>会员</h3></div>
                                     <div class="ibox-content">
-                                        <h1 class="no-margins">40,886,200</h1>
+                                        <h1 class="no-margins" id="hy">40,886,200</h1>
                                         <div class="stat-percent font-bold text-danger">38%<i class="icon-tubiaoshangshengqushi"></i></div>
                                         <small>注册会员</small>
                                     </div>
@@ -467,6 +468,30 @@
                         </li>
                     </ul>
                 </div>
+                <script>
+                  // 添加数字滚动
+                  var options = {
+                  useEasing: true, 
+                  useGrouping: true, 
+                  separator: ',', 
+                  decimal: '.', 
+                };
+                var demo1 = new CountUp('sr', 0, 40886200, 0, 2.5, options);
+                var demo2 = new CountUp('dd', 0, 40886200, 0, 2.5, options);
+                var demo3 = new CountUp('fk', 0, 40886200, 0, 2.5, options);
+                var demo4 = new CountUp('hy', 0, 40886200, 0, 2.5, options);
+                if (!demo1.error && !demo2.error && !demo3.error && !demo4.error) {
+                  demo1.start();
+                  demo2.start();
+                  demo3.start();
+                  demo4.start();
+                } else {
+                  console.error(demo1.error);
+                  console.error(demo2.error);
+                  console.error(demo3.error);
+                  console.error(demo4.error);
+                }
+                </script>
                 <!-- 时间段订单统计 -->
                 <div class="flow-layout col-1">
                     <div class="ibox float-e-margins">
