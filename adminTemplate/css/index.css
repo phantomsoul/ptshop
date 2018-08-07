@@ -1,0 +1,285 @@
+/*===================欢迎页===================*/
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fbfbfb;
+    border-color: #e7eaec;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 4px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 12px 15px 7px;
+    min-height: 48px;
+}
+.ibox-title h3 {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 0 7px;
+  padding: 0;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  text-shadow: none;
+  display: inline;
+  padding: 3px 8px;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.label-primary {
+    background-color: #1c84c6;
+    color: #FFF;
+}
+.label-info {
+    background-color: #5bc0de;
+    color: #FFF;
+}
+.label-success {
+    background-color: #33be85;
+    color: #FFF;
+}
+.label-danger {
+    background-color: #ed5565;
+    color: #FFF;
+}
+.ibox-content {
+  clear: both;
+  background-color: #fbfbfb;
+  color: inherit;
+  padding: 15px 20px 20px;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+.no-margins {
+  margin: 0;
+}
+h1 {
+  font-size: 26px;
+}
+.font-bold {
+  font-weight: 600;
+}
+/*欢迎页统计图*/
+.col-sm-9 {
+  width: 70%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.stat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.no-margins {
+    margin: 0;
+}
+.small, small {
+    font-size: 85%;
+}
+.flot-chart {
+  display: block;
+  height: 200px;
+}
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+.progress-mini, .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 0;
+}
+.progress-mini, .progress-small {
+  margin-top: 5px;
+}
+.progress-bar {
+  background-color: #1ab394;
+}
+.bootstrap-progress {
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #efefef;
+}
+.ibox-tools {
+  display: inline-block;
+  float: right;
+  margin-top: 0;
+  position: relative;
+  padding: 0;
+}
+.ibox-tools a {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #c4c4c4;
+}
+.ibox-heading {
+  background-color: #f3f6fb;
+  border-bottom: none;
+}
+.ibox-heading h3 {
+    font-weight: 200;
+    font-size: 24px;
+}
+.feed-element:first-child {
+    margin-top: 0;
+}
+.feed-activity-list .feed-element {
+    border-bottom: 1px solid #e7eaec;
+}
+.feed-element, .media-body {
+    overflow: hidden;
+}
+.feed-element {
+    padding-bottom: 15px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:before {
+    display: table;
+    content: " ";
+}
+.transaction h3{
+  padding-left: 10px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.transaction h3 span, .sales-ranking h3 span {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+.goods-state.a-line {
+  width: 100%;
+  padding: 0 0 30px;
+}
+.goods-state {
+  overflow: hidden;
+  text-align: center;
+}
+.goods-state.order ul li {
+    width: 14%;
+}
+.goods-state ul li {
+    float: left;
+    width: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.goods-state ul li a {
+    display: block;
+}
+.goods-state ul li a strong {
+    font-size: 22px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #0072D2;
+    display: block;
+    margin: 10px 0;
+}
+.goods-state ul li a span {
+    color: #4f5f6f;
+}
+.transaction table tr td strong {
+    color: #333333;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.transaction table tr td span {
+    display: block;
+    margin-top: 10px;
+    color: #999999;
+}
+.transaction table, .sales-ranking table {
+    width: 100%;
+    text-align: center;
+}
+.sales-ranking table tr td {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 12px;
+}
+.frist {
+    color: #ed5565;
+    font-weight: bold;
+    font-size: 14px;
+}
+.second {
+    color: #FF9800;
+    font-weight: bold;
+    font-size: 14px;
+}
+.third {
+    color: #03A9F4;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sales-ranking table tr td a {
+    color: #333333;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-white {
+    background: #fff;
+}
+.btn-white.active, .btn-white:active, .open .dropdown-toggle.btn-white {
+    background-image: none;
+}
+.btn-white.active, .btn-white:active {
+    box-shadow: 0 2px 5px rgba(0,0,0,.15)inset;
+}
+.btn-white.active, .btn-white:active, .btn-white:focus, .btn-white:hover, .open .dropdown-toggle.btn-white {
+    color: inherit;
+    border: 1px solid #d2d2d2;
+}
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    float: left;
+}
+.btn-group-xs>.btn, .btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
