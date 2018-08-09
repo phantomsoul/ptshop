@@ -825,18 +825,13 @@
                 <dl>
                   <dt>商品类型：</dt>
                   <dd>
-                    <div class="selectric-wrapper selectric-select-common" style="width: 250px;">
-                      <div class="selectric-hide-select">
-                        <select id="goodsType" class="select-common" tabindex="-1">
-                          <option value="0">请选择商品类型</option>
-                          <option value="1">女装</option>
-                          <option value="2">男装</option>
-                          <option value="3">箱包</option>
-                          <option value="4" selected="selected">电视</option>
-                          <option value="6">笔记本</option>
-                        </select>
-                      </div>
-                    <div class="selectric"><span class="selectric-label">电视</span><button class="selectric-button">▾</button></div><div class="selectric-items" tabindex="-1"><div class="selectric-scroll"><ul><li data-index="0" class="" title="请选择商品类型">请选择商品类型</li><li data-index="1" class="" title="女装">女装</li><li data-index="2" class="" title="男装">男装</li><li data-index="3" class="" title="箱包">箱包</li><li data-index="4" class="selected" title="电视">电视</li><li data-index="5" class="last" title="笔记本">笔记本</li></ul></div></div><input class="selectric-input" tabindex="0"></div>
+                    <div class="form-cont">
+                      <select style="width:30%;">
+                        <option>商品分类</option>
+                        <option>女装</option>
+                        <option>男装</option>
+                      </select>
+                    </div>
                     <span class="help-inline">请选择商品类型</span>
                   </dd>
                 </dl>
@@ -849,9 +844,9 @@
               <div class="tab-cont">
                 <h4 class="js-goods-img">商品图片</h4>
                 <dl>
-                  <dt><i class="text-danger">*</i>商品图片：</dt>
+                  <dt>图片上传：</dt>
                   <dd>
-                    <div id="goods_picture_box"class="controls" style="background-color:#FFF;border: 1px solid #E9E9E9;">
+                    <div id="goods_picture_box"class="controls">
                       <div class="ncsc-goods-default-pic">
                         <div class="goodspic-uplaod" style="padding: 15px;">
                           <div class='img-box' style="min-height:160px;">
@@ -861,17 +856,17 @@
                           </div>
                           <div class="clear"></div>
                           <span class="img-error">最少需要一张图片作为商品主图</span>
-                          <p class="hint">上传商品图片，<font color="red">第一张图片将作为商品主图</font>,支持同时上传多张图片,多张图片之间可随意调整位置；支持jpg、gif、png格式上传或从图片空间中选择，建议使用尺寸800x800像素以上、大小不超过1M的正方形图片，上传后的图片将会自动保存在图片空间的默认分类中。</p>
-                          <div class="handle">
+                          <p class="hint">第一张图片将作为商品主图,支持同时上传多张图片,多张图片之间可随意调整位置；支持jpg、gif、png格式上传或从图片空间中选择，建议使用尺寸800x800像素以上、大小不超过1M的正方形图片，上传后的图片将会自动保存在图片空间的默认分类中。</p>
+                          <div class="handle" style="margin-top: 12px;">
                             <div class="ncsc-upload-btn">
                               <a href="javascript:void(0);">
                                 <span>
                                   <input style="cursor:pointer;font-size:0;" type="file" id="fileupload" hidefocus="true" class="input-file" name="file_upload" multiple="multiple" />
                                 </span>
-                                <p>图片上传</p>
+                                <button class="btn-sm btn-info-outline radius" style="margin-right: 10px;">图片上传</button>
                               </a>
+                              <button class="btn-sm btn-info-outline radius" id="img_box" nctype="show_image" href="javascript:void(0);">从图片空间选择</button>
                             </div>
-                            <a class="ncsc-btn mt5" id="img_box" nctype="show_image" href="javascript:void(0);">从图片空间选择</a>
                           </div>
                         </div>
                       </div>
@@ -879,110 +874,38 @@
                     <span class="help-inline">最少需要一张图片作为商品主图</span>
                   </dd>
                 </dl>
-                <h4 class="js-goods_detail">商品详情</h4>
+                <h4>视频展示</h4>
                 <dl>
-                  <dt><i class="require">*</i>商品描述：</dt>
-                  <dd>
-                    <div class="controls" id="discripContainer">
-                      <textare id="tareProductDiscrip" name="discripArea" style="height: 500px; width: 800px; display: none;"></textare>
-                      <script id="editor" type="text/plain" style="width: 100%; height: 500px;"></script>
-                      <span class="help-inline">请填写商品描述</span>
+                  <dt>视频上传：</dt>
+                  <dd style="padding:0;">
+                    <div class="goodspic-uplaod" style="overflow: hidden;position:relative;">
+                      <div class="video-thumb">
+                                        <video id="my-video" class="video-js vjs-big-play-centered" controls="" poster="/public/static/blue/img/goods_video_upload_bg.png" src="">
+                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that</p>
+                          </video>
+                          <span class="del-video  hide " onclick="del_video(this)"></span>
+                                    </div>
+                      <input class="input-file" name="file_upload" id="videoupload" type="file" onchange="fileUpload_video(this);" title="视频上传" style="position: absolute;left: 0;width: 290px;height: 140px;opacity: 0;cursor: pointer;z-index:10;">
                     </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>输入网址：</dt>
+                  <dd>
+                    <input type="text" id="video_url" class="input-common" style="width: 290px !important;" placeholder="在此输入外链视频地址" value="">
+                    <span style="display: block;margin-top: 5px;">注意事项：</span>
+                    <ul style="color:#FF6600;">
+                      <li>1、检查upload文件夹是否有读写权限。</li>
+                      <li>2、PHP默认上传限制为2MB，需要在php.ini配置文件中修改“post_max_size”和“upload_max_filesize”的大小。</li>
+                      <li>3、视频支持手动输入外链视频地址或者上传本地视频文件</li>
+                      <li>4、必须上传.mp4视频格式</li>
+                      <li>5、视频文件大小不能超过500MB</li>
+                    </ul>
                   </dd>
                 </dl>
               </div>
               <div class="tab-cont">
-                <dl>
-                  <dt>所在地：</dt>
-                  <dd>
-                    <select id="provinceSelect" onchange="getProvince(this,'#citySelect',-1)">
-                      <option value="0">请选择省</option>
-                    </select>
-                    <select id="citySelect">
-                      <option value="0">请选择市</option>
-                    </select>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt><i class="text-danger">*</i>运费：</dt>
-                  <dd>
-                    <div class="controls">
-                      <label class="radio inline normal"><input type="radio" name="fare" value="0" checked="checked" />免邮</label>
-                      <label class="radio inline normal"><input type="radio" name="fare" value="1" />买家承担运费</label>
-                      <span class="help-inline">请选择运费类型</span>
-                    </div>
-                  </dd>
-                </dl>
-                <dl id="valuation-method" style="display: none">
-                  <dt><i class="text-danger">*</i>计价方式：</dt>
-                  <dd>
-                    <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="3" checked="checked" />计件</label>
-                    <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="2" />体积</label>
-                    <label class="radio inline normal"><input type="radio" name="shipping_fee_type" value="1" />重量</label>
-                  </dd>
-                </dl>
-                <dl id="commodity-weight" style="display: none">
-                  <dt><i class="text-danger">*</i>商品重量：</dt>
-                  <dd>
-                    <input type="number" class="goods-stock" id="goods_weight" min="0" value="0" />公斤
-                    <span class="help-inline">商品重量必须大于0</span>
-                  </dd>
-                </dl>
-                <dl id="commodity-volume" style="display: none">
-                  <dt><i class="text-danger">*</i>商品体积：</dt>
-                  <dd>
-                    <input type="number" class="goods-stock" id="goods_volume" min="0" value="0" />立方米
-                    <span class="help-inline">商品体积必须大于0</span>
-                  </dd>
-                </dl>
-                <dl id="express_Company" style="display: none;">
-                  <dt>物流公司：</dt>
-                  <dd>
-                    <select id="expressCompany">
-                      <option value="0">请选择物流公司</option>
-                      <option value="3">多岁的</option>
-                      <option value="4">顺丰</option>
-                    </select>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt><i class="text-danger">*</i>库存显示：</dt>
-                  <dd>
-                    <div class="controls">
-                      <label class="radio inline normal"><input type="radio" name="stock" checked="checked" value="1" />是</label>
-                      <label class="radio inline normal"><input type="radio" name="stock" value="0" />否</label>
-                      <span class="help-inline">请选择库存是否显示</span>
-                    </div>
-                  </dd>
-                </dl>
-              </div>
-              <div class="tab-cont">
-                <dl>
-                  <dt><i class="text-danger">*</i>积分设置：</dt>
-                  <dd>
-                    <div class="controls">
-                      <label class="radio inline normal"><input type="radio" name="integralSelect" value="0" checked="checked" />非积分兑换</label>
-                      <label class="radio inline normal"><input type="radio" name="integralSelect" value="1" />积分兑换</label>
-                    </div>
-                  </dd>
-                </dl>
-                <dl id="integral-exchange" style="display: none">
-                  <dt>积分兑换：</dt>
-                  <dd>
-                    <div class="controls">
-                        <input id="integration_available_use" class="input-mini" placeholder="0" min="0" type="number" onchange="integrationChange(this);" />&nbsp;积分
-                    <span class="help-inline">请设置积分</span>
-                    </div>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>购买可赠送：</dt>
-                  <dd>
-                    <div class="controls">
-                        <input id="integration_available_give" class="input-mini" placeholder="0" min="0" type="number" onchange="integrationChange(this);" />&nbsp;积分
-                    </div>
-                  </dd>
-                </dl>
+                <textarea  value="" name="content"  id="content"></textarea>
               </div>
             </div>
           </div>
@@ -1025,5 +948,49 @@
 </div>
 <script src="/public/admin/js/goods/release_good_second.js"></script>
 <script src="/public/admin/js/jquery.selectric.js"></script>
+<script>//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{
+      toolbars: [
+        [  
+            'forecolor', //字体颜色  
+            'backcolor', //背景色  
+            'fontfamily', //字体  
+            'fontsize', //字号          
+            '|',        
+            'bold', //加粗  
+            'italic', //斜体  
+            'underline', //下划线  
+            'strikethrough', //删除线  
+            '|',  
+            'formatmatch', //格式刷  
+            'removeformat', //清除格式  
+            '|',  
+            'insertorderedlist', //有序列表  
+            'insertunorderedlist', //无序列表  
+            '|',  
+            'inserttable', //插入表格  
+            'paragraph', //段落格式  
+            'simpleupload', //单图上传
+            'insertimage', //多图上传
+            'imagecenter', //居中  
+            'attachment', //附件  
+              
+            '|',
+            'autotypeset', //自动排版
+            'justifyleft', //居左对齐  
+            'justifycenter', //居中对齐  
+            'horizontal', //分隔线  
+            '|',  
+            'blockquote', //引用  
+            'insertcode', //代码语言  
+              
+            '|',  
+            'source', //源代码  
+            'preview', //预览  
+            'fullscreen', //全屏  
+            ]
+             ],
+    initialFrameWidth:800,initialFrameHeight:200,
+                         });</script>
 </body>
 </html>

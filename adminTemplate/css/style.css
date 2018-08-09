@@ -2415,17 +2415,17 @@ h1 {
 .frist {
     color: #ed5565;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 19px;
 }
 .second {
     color: #FF9800;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 17px;
 }
 .third {
     color: #03A9F4;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 .sales-ranking table tr td a {
     color: #333333;
@@ -3156,6 +3156,170 @@ button.close {
     color: #333333;
     margin: 15px 0 10px 10px;
 }
-.panel-bd select, .panel-bd a {
+.card select, .card a {
     font-size: 12px;
+}
+.tab-cont dl {
+    font-size: 0;
+    line-height: 20px;
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+.tab-cont dl dt {
+    font-size: 12px;
+    line-height: 30px;
+    color: #333;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: right;
+    display: inline-block;
+    width: 13%;
+    padding: 8px 1% 8px 0;
+    margin: 0;
+}
+.tab-cont dl dd {
+    font-size: 12px;
+    line-height: 30px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    width: 80%;
+    padding: 8px 0;
+    min-height: 30px;
+    margin: 0;
+}
+.goods-sku, .goods-sku-attribute {
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #E9E9E9;
+    color: #333333;
+    font-size: 12px;
+}
+.goods-sku-attribute-block {
+    padding: 10px;
+    display: none;
+}
+.goods-sku-attribute {
+    margin-top: 10px;
+}
+.goods-sku, .goods-sku-attribute {
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #E9E9E9;
+    color: #333333;
+    font-size: 12px;
+}
+.goods-sku-attribute-block tr td {
+    line-height: 30px;
+}
+.goods-sku td, .goods-sku-attribute td {
+    padding: 4px;
+    border: 1px solid #e5e5e5;
+}
+.goods-sku-attribute-item-radio, .goods-sku-attribute-item-checkbox {
+    display: inline-block;
+    margin-right: 20px;
+}
+.checkbox-common {
+    background: url(../public/admin/images/ns_common_checkbox.png) no-repeat;
+    width: 16px !important;
+    height: 14px !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+.upload-thumb {
+    display: block !important;
+    float: left;
+    width: 147px !important;
+    height: 147px !important;
+    position: relative;
+    border: 1px solid #e5e5e5;
+}
+.hint {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    margin: 10px 0 0;
+}
+.ncsc-upload-btn {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.ncsc-upload-btn span, .upload-btn span {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.ncsc-upload-btn .input-file, .upload-btn .input-file {
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.video-thumb {
+    display: block !important;
+    float: left;
+    width: 290px !important;
+    height: 170px !important;
+    position: relative;
+}
+.video-thumb>#my-video {
+    width: 100% !important;
+    height: 171px;
+    background: #ffffff;
+}
+.video-js {
+    display: block;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.vjs-no-js {
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.video-js *, .video-js *:before, .video-js *:after {
+    box-sizing: inherit;
+}
+.video-thumb span {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url(../public/admin/images/video_thumb_close.png);
+    background-size: 100%;
+    z-index: 100;
 }
